@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/core/utils/index.dart';
 
 class TextHome extends StatelessWidget{
   const TextHome({super.key});
@@ -24,10 +25,10 @@ class TextHome extends StatelessWidget{
                   ],
                 ),
                  SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.022,
+                  height: MediaQuery.of(context).size.height * 0.006,
                 ),
-                const Text('اختر الأبن',
-                    style: TextStyle(
+                Text('اختر الأبن',
+                    style: Styles.textStyle22.copyWith(
                       fontSize: 32,
                       fontWeight: FontWeight.w500,
                       fontStyle:  FontStyle.normal

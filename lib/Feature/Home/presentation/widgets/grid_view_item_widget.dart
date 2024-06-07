@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:school_room/core/utils/index.dart';
+import 'package:school_room/Feature/Home/domain/entities/son.dart';
 import 'package:school_room/Feature/Home/presentation/pages/home_view_details.dart';
-
-import '../../domain/entities/son.dart';
+import 'package:school_room/core/utils/index.dart';
 
 class GridViewItem extends StatelessWidget{
-   GridViewItem({required this.son});
- final Son son;
+  const GridViewItem({super.key, required Son son});
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,20 +31,20 @@ class GridViewItem extends StatelessWidget{
                      Align(
                       alignment: Alignment.topCenter,
                        child: Image.asset(
-                         son.image ?? ''  ,
-                        width: 80,
-                        height: 80,
+                        'assets/images/Rectangleee22.png',
+                         width: MediaQuery.of(context).size.width * 0.5,
+                         height: MediaQuery.of(context).size.height * 0.09,
                         ),
             ),
              Text(
-             son.name ?? '',
+              'احمد',
             style: Styles.textStyle22.copyWith(
               fontSize: 20,
               fontWeight: FontWeight.bold
               ),
             ),
               Text(
-              son.level ?? '',
+              'الصف الاول المتوسط',
             style: Styles.textStyle14
             ),
             Row(
@@ -56,7 +55,7 @@ class GridViewItem extends StatelessWidget{
               fontSize: 11,
               ),
             ),
-          son.status ?   Image.asset('assets/images/Vector.png') :  Image.asset('assets/images/Vector.png')
+            Image.asset('assets/images/Vector.png')
               ]
             ),
                    ],

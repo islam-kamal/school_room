@@ -14,13 +14,13 @@ class HomeDetailsAppBar extends StatelessWidget{
                     child: Row(
                       children: [
                         Image.asset('assets/images/Rectangle.png',
-                        width: MediaQuery.of(context).size.width *0.14,
+                        width: MediaQuery.of(context).size.width *0.13,
                         height: MediaQuery.of(context).size.height *0.14,
                         ),
                         SizedBox(
                           width: MediaQuery.of(context).size.width * 0.018,
                         ),
-                        const Column(
+                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('ايمن احمد',style: Styles.textStyle16,),
@@ -35,7 +35,9 @@ class HomeDetailsAppBar extends StatelessWidget{
                       ),
                        const Expanded(
                       flex: 1,
-                      child: ImageIcon(AssetImage('assets/images/UserCircle.png'))
+                      child: ImageIcon(
+                        AssetImage('assets/images/UserCircle.png'),
+                        ),
                       ),
                 ],
               );

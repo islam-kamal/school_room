@@ -6,6 +6,7 @@ import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 
+// ignore: must_be_immutable
 class IndexScreen extends StatefulWidget {
   int index;
   IndexScreen({ required this.index});
