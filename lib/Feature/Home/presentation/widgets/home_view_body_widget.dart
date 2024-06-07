@@ -9,10 +9,10 @@ class HomeViewBody extends StatelessWidget{
    HomeViewBody({super.key});
 
   List<Son> sons = [
-    Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
-    Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'level', status: false),
-    Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
-    Son(name: 'assaas0',image:  'assets/images/Rectangleee22.png',level: 'dssd',status: false)
+    Son(name: 'هناء', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
+    Son(name: 'احمد', image:  'assets/images/Rectangleee22.png', level: 'level', status: false),
+    Son(name: 'محمد', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
+    Son(name: 'محمود',image:  'assets/images/Rectangleee22.png',level: 'dssd',status: false)
   ];
 
   @override

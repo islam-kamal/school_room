@@ -7,6 +7,8 @@ import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 void main() {
   runApp(const SchoolRoom());
 }
+GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 class SchoolRoom extends StatelessWidget{
   const SchoolRoom({Key?key}) : super(key:key);
 
@@ -15,6 +17,7 @@ class SchoolRoom extends StatelessWidget{
 
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
+      navigatorKey: navigatorKey,
       home: IndexScreen(index: 0,),
       );
   }

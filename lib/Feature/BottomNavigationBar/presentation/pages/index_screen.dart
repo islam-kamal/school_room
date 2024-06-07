@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/chat_screen.dart';
 import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 
+import '../../../../Base/common/theme.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 
 class IndexScreen extends StatefulWidget {
@@ -42,15 +43,7 @@ class _IndexScreenState extends State<IndexScreen> {
     return Scaffold(
       body: _buildScreens[current_index!],
 
-
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        notchMargin: 6.0,
-        child: Container(
-            decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(top: BorderSide(color:  Colors.white, width: 3.0))),
-            child:BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
               items:  <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: Icon(Icons.map_outlined),
@@ -67,17 +60,17 @@ class _IndexScreenState extends State<IndexScreen> {
                 )
               ],
               currentIndex: current_index!,
-              selectedItemColor: Colors.green,
+              selectedItemColor: kWhiteColor,
               onTap: _onItemTapped,
-              backgroundColor: Colors.black,
-              unselectedItemColor: Colors.white,
+              backgroundColor: kWhiteColor,
+              unselectedItemColor: kGreyColor,
               type: BottomNavigationBarType.fixed,
               selectedFontSize: 14.0,
               unselectedFontSize: 14.0,
               showUnselectedLabels: true,
 
-            )   ),
-      ),
+            )
+
     );
   }
 
