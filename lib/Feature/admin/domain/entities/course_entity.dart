@@ -1,0 +1,3 @@
+class AdminEntity{
+  final String 
+}
