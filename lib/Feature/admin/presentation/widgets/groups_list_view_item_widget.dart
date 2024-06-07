@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Feature/admin/domain/entities/course_entity.dart';
 import 'package:school_room/core/utils/styles.dart';
 
 class GroupsListViewItem extends StatelessWidget{
-  const GroupsListViewItem({super.key});
-
+  const GroupsListViewItem({super.key, required this.course});
+final CourseEntity course;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,17 +28,17 @@ class GroupsListViewItem extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                          'مجموعة اللغة العربية',
+                          course.subject! ?? '',
                         style: Styles.textStyle22,
                       ),
                       Text(
-                          'الصف الثالث المتوسط (3/4)',
+                          course.level! ?? '',
                         style: Styles.textStyle16,
                       ),
                       Row(
                         children: [
                           Text(
-                              '20 طالب ',
+                              course.studentNumber! ?? '',
                             style: Styles.textStyle22,
                           ),
                           Image.asset('assets/images/profile.png')

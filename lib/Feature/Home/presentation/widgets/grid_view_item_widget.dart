@@ -25,17 +25,8 @@ class GridViewItem extends StatelessWidget{
                  color:  const Color(0xffC9C9C9),
           ),
           ),
-              ),
-                 Column(
+          child: Column(
                    children: [
-                     Align(
-                      alignment: Alignment.topCenter,
-                       child: Image.asset(
-                        'assets/images/Rectangleee22.png',
-                         width: MediaQuery.of(context).size.width * 0.5,
-                         height: MediaQuery.of(context).size.height * 0.09,
-                        ),
-            ),
              Text(
               'احمد',
             style: Styles.textStyle22.copyWith(
@@ -60,6 +51,17 @@ class GridViewItem extends StatelessWidget{
             ),
                    ],
                  ),
+              ),
+                        Align(
+                      alignment: Alignment(0,-2),
+                       child: Image.asset(
+                        'assets/images/Rectangleee22.png',
+                         width: MediaQuery.of(context).size.width * 0.5,
+                         height: MediaQuery.of(context).size.height * 0.09,
+                        ),
+            ),
+           
+                 
             ],
         
       ),

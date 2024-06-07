@@ -77,7 +77,8 @@ class _IndexScreenState extends State<IndexScreen> {
               unselectedFontSize: 14.0,
               showUnselectedLabels: true,
 
-            )   ),
+            ),
+               ),
       ),
     );
   }
