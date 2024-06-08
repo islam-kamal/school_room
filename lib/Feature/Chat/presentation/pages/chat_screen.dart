@@ -21,6 +21,13 @@ final List<ConversationsEntity> conversations = [
        time: '22:20',
         numberMessage: '12'
         ),
+         ConversationsEntity(
+    image: 'assets/images/Rectangleee22.png',
+     name: 'أ/مريم احمد',
+      message: 'نقدر ذلك! ,اراك قريبا! ,🚀',
+       time: '10:45',
+        numberMessage: '1'
+        ),
 ];
 
   @override
