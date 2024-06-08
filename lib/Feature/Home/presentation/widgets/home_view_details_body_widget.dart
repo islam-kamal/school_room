@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/core/utils/index.dart';
 import 'package:school_room/Feature/Home/presentation/widgets/home_details_app_bar_widget.dart';
-
-import 'custom_bottom_navigation_bar_widget.dart';
 import 'home_details_assignments_widget.dart';
 
 class HomeViewDetailsBody extends StatelessWidget{
@@ -18,7 +16,7 @@ class HomeViewDetailsBody extends StatelessWidget{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const HomeDetailsAppBar(),
+            const HomeDetailsAppBar(),
             const HomeDetailsAssignments(),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.013,
@@ -31,7 +29,7 @@ class HomeViewDetailsBody extends StatelessWidget{
                 fontWeight: FontWeight.bold,
               ),
               ),
-              Container(
+            Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height *0.16,
               decoration: BoxDecoration(
@@ -42,7 +40,6 @@ class HomeViewDetailsBody extends StatelessWidget{
             ],
           ),
           ),
-          bottomNavigationBar: CustomBottomNavigationBar(),
       ),
     );
   }

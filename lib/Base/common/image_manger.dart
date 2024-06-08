@@ -36,4 +36,8 @@ class ImageAssets {
   static const String app_slogan = "$imagePath/app_slogan.png";
   static const String suggested_jobs = "$imagePath/suggested_jobs.png";
   static const String tga_white_new = "$imagePath/tga_white_new.png";
+  static const String chat_icon = "$imagePath/chat.png";
+  static const String groups = "$imagePath/groups.png";
+  static const String notification = "$imagePath/notification.png";
+  static const String tasks = "$imagePath/tasks.png";
 }

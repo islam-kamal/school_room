@@ -11,14 +11,15 @@ import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
 import '../../../admin/presentation/pages/admin_screen.dart';
 
-class IndexScreen extends StatefulWidget {
+class StudentIndexScreen extends StatefulWidget {
   int index;
-  IndexScreen({required this.index});
+  StudentIndexScreen({required this.index});
+
   @override
-  State<IndexScreen> createState() => _IndexScreenState();
+  State<StudentIndexScreen> createState() => _StudentIndexScreenState();
 }
 
-class _IndexScreenState extends State<IndexScreen> {
+class _StudentIndexScreenState extends State<StudentIndexScreen> {
   int? current_index;
 
   @override
@@ -36,10 +37,9 @@ class _IndexScreenState extends State<IndexScreen> {
   List<Widget> _buildScreens = [
     HomeScreen(),
     TeacherChatScreen(),
-    NotificationsScreen(),
-    ProfileScreen(),
     AdminScreen(),
-    AdminScreen()
+    AdminScreen(),
+    ProfileScreen()
   ];
 
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -65,16 +65,12 @@ class _IndexScreenState extends State<IndexScreen> {
             label: 'Groups',
           ),
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.profile)),
-            label: 'Profile',
-          ),
-          CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.notification)),
-            label: 'Notification',
-          ),
-          CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.tasks)),
             label: 'Tasks',
+          ),
+          CurvedNavigationBarItem(
+            child: ImageIcon(AssetImage(ImageAssets.profile)),
+            label: 'Profile',
           ),
         ],
         color: Colors.white,

@@ -11,14 +11,15 @@ import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
 import '../../../admin/presentation/pages/admin_screen.dart';
 
-class IndexScreen extends StatefulWidget {
+class FatherIndexScreen extends StatefulWidget {
   int index;
-  IndexScreen({required this.index});
+  FatherIndexScreen({required this.index});
+
   @override
-  State<IndexScreen> createState() => _IndexScreenState();
+  State<FatherIndexScreen> createState() => _FatherIndexScreenState();
 }
 
-class _IndexScreenState extends State<IndexScreen> {
+class _FatherIndexScreenState extends State<FatherIndexScreen> {
   int? current_index;
 
   @override
@@ -36,10 +37,8 @@ class _IndexScreenState extends State<IndexScreen> {
   List<Widget> _buildScreens = [
     HomeScreen(),
     TeacherChatScreen(),
-    NotificationsScreen(),
-    ProfileScreen(),
     AdminScreen(),
-    AdminScreen()
+    ProfileScreen()
   ];
 
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -53,28 +52,20 @@ class _IndexScreenState extends State<IndexScreen> {
         index: 0,
         items: [
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.home)),
-            label: 'Home',
+            child: ImageIcon(AssetImage(ImageAssets.groups)),
+            label: 'Groups',
           ),
           CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.chat_icon)),
             label: 'Chat',
           ),
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.groups)),
-            label: 'Groups',
+            child: ImageIcon(AssetImage(ImageAssets.tasks)),
+            label: 'Tasks',
           ),
           CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.profile)),
             label: 'Profile',
-          ),
-          CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.notification)),
-            label: 'Notification',
-          ),
-          CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.tasks)),
-            label: 'Tasks',
           ),
         ],
         color: Colors.white,

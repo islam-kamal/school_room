@@ -5,20 +5,22 @@ import 'package:school_room/Base/common/image_manger.dart';
 
 import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.dart';
 import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
+import 'package:school_room/Feature/Tasks/presentation/pages/teacher_tasks_screen.dart';
 
 import '../../../../Base/common/theme.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
 import '../../../admin/presentation/pages/admin_screen.dart';
 
-class IndexScreen extends StatefulWidget {
+class TeacherIndexScreen extends StatefulWidget {
   int index;
-  IndexScreen({required this.index});
+  TeacherIndexScreen({required this.index});
+
   @override
-  State<IndexScreen> createState() => _IndexScreenState();
+  State<TeacherIndexScreen> createState() => _TeacherIndexScreenState();
 }
 
-class _IndexScreenState extends State<IndexScreen> {
+class _TeacherIndexScreenState extends State<TeacherIndexScreen> {
   int? current_index;
 
   @override
@@ -34,12 +36,10 @@ class _IndexScreenState extends State<IndexScreen> {
   }
 
   List<Widget> _buildScreens = [
-    HomeScreen(),
     TeacherChatScreen(),
-    NotificationsScreen(),
-    ProfileScreen(),
-    AdminScreen(),
-    AdminScreen()
+    HomeScreen(),
+    TeacherTasksScreen(),
+    ProfileScreen()
   ];
 
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
@@ -53,10 +53,6 @@ class _IndexScreenState extends State<IndexScreen> {
         index: 0,
         items: [
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.home)),
-            label: 'Home',
-          ),
-          CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.chat_icon)),
             label: 'Chat',
           ),
@@ -65,21 +61,17 @@ class _IndexScreenState extends State<IndexScreen> {
             label: 'Groups',
           ),
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.profile)),
-            label: 'Profile',
-          ),
-          CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.notification)),
-            label: 'Notification',
-          ),
-          CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.tasks)),
             label: 'Tasks',
+          ),
+          CurvedNavigationBarItem(
+            child: ImageIcon(AssetImage(ImageAssets.profile)),
+            label: 'Profile',
           ),
         ],
         color: Colors.white,
         buttonBackgroundColor: kWhiteColor,
-        backgroundColor: kGreenColor,
+        backgroundColor: kAppBarBackgroundColor,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: _onItemTapped,

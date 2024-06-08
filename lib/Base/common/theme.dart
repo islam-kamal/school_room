@@ -19,7 +19,7 @@ const Color kAvailableColor = const Color(0xffE0D9FF);
 const Color kUnavailableColor = const Color(0xffEBECF1);
 const Color kYellowColor = const Color(0xFFF39204);
 const Color kLightRed = const Color(0xFFFEC8C3);
-const Color flashBackgroundColor = const Color(0xFF03314B);
+const Color kAppBarBackgroundColor = const Color(0xFF03314B);
 
 TextStyle blackTextStyle = GoogleFonts.poppins(
   color: kBlackColor,
