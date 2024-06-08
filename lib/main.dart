@@ -19,8 +19,8 @@ class SchoolRoom extends StatelessWidget{
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      // ignore: prefer_const_constructors
-      home: AdminScreen(),  //IndexScreen(index: 0,)
+      
+      home:  IndexScreen(index: 0,) //AdminScreen(), 
       );
   }
 }

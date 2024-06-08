@@ -7,13 +7,20 @@ import 'package:school_room/core/utils/index.dart';
 class ChatScreen extends StatelessWidget{
 
 final List<ConversationsEntity> conversations = [
-  ConversationsEntity(
+   ConversationsEntity(
     image: 'assets/images/Rectangle.png',
-     name: 'bcvbcv',
-      message: 'xxcxvbcbncv',
-       time: '22:6',
+     name: 'أ/ احمد محمد',
+      message: 'اشكرك كثيرا! ,أتمنى لك يوماً عظيماً! ,😊',
+       time: '10:25',
         numberMessage: '5'
-        )
+        ),
+  ConversationsEntity(
+    image: 'assets/images/Avatar.png',
+     name: 'أ/محمود محمد',
+      message: 'عظيم، شكرا جزيلا! ,💫',
+       time: '22:20',
+        numberMessage: '12'
+        ),
 ];
 
   @override
@@ -21,7 +28,7 @@ final List<ConversationsEntity> conversations = [
     return  Directionality(
       textDirection: TextDirection.rtl,
       child: Padding(
-        padding: EdgeInsets.only(top: 26,left: 15, right: 13),
+        padding: EdgeInsets.only(top: 26,left: 15, right: 6),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -33,14 +40,17 @@ final List<ConversationsEntity> conversations = [
                 fontWeight: FontWeight.bold
               ),
             ),
-            ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: conversations.length,
-                itemBuilder: (context , index){
-                  return  ChatsListViewItem(conversation: conversations[index],);
-                }
-            ),
+            Expanded(
+              child: ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: conversations.length,
+                            itemBuilder: (context , index){
+                              return  ChatsListViewItem(conversation: conversations[index],);
+                            }
+                        ),
+            )
+            ,
           ],
         ),
       ),
