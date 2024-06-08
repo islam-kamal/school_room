@@ -1,9 +1,21 @@
 import 'package:flutter/cupertino.dart';
+import 'package:school_room/Feature/Chat/domain/entities/conversation_entity.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/chats_app_bar.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/chats_list_view_item_widget.dart';
 import 'package:school_room/core/utils/index.dart';
 
 class ChatScreen extends StatelessWidget{
+
+final List<ConversationsEntity> conversations = [
+  ConversationsEntity(
+    image: 'assets/images/Rectangle.png',
+     name: 'bcvbcv',
+      message: 'xxcxvbcbncv',
+       time: '22:6',
+        numberMessage: '5'
+        )
+];
+
   @override
   Widget build(BuildContext context) {
     return  Directionality(
@@ -24,9 +36,9 @@ class ChatScreen extends StatelessWidget{
             ListView.builder(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                itemCount: 3,
+                itemCount: conversations.length,
                 itemBuilder: (context , index){
-                  return const ChatsListViewItem();
+                  return  ChatsListViewItem(conversation: conversations[index],);
                 }
             ),
           ],

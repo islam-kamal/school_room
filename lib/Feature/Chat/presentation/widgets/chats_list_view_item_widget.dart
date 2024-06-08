@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Feature/Chat/domain/entities/conversation_entity.dart';
 import 'package:school_room/core/utils/index.dart';
 
 class ChatsListViewItem extends StatelessWidget{
-  const ChatsListViewItem({super.key});
+   const ChatsListViewItem({super.key, required this.conversation});
+
+final ConversationsEntity conversation;
 
   @override
   Widget build(BuildContext context) {
