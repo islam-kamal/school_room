@@ -11,8 +11,6 @@ final List<CourseEntity> courses = [
   CourseEntity('English', 'four', '27'),
   CourseEntity('Math', 'five', '24'),
   CourseEntity('Arabic', 'tow', '33'),
-  CourseEntity('Arabic', 'tow', '33'),
-  CourseEntity('Arabic', 'tow', '33'),
 ];
   @override
   Widget build(BuildContext context) {

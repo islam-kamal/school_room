@@ -29,7 +29,7 @@ class SchoolRoom extends StatelessWidget{
           foregroundColor: Colors.black  //here you can give the text color
           )
      ),
-      home: AdminScreen(),         //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
+      home: AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
       );
   }
 }
