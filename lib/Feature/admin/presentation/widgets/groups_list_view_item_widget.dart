@@ -4,7 +4,9 @@ import 'package:school_room/core/utils/styles.dart';
 
 class GroupsListViewItem extends StatelessWidget{
   const GroupsListViewItem({super.key, required this.course});
+  
 final CourseEntity course;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,17 +30,17 @@ final CourseEntity course;
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                          course.subject! ?? '',
+                          course.subject!,
                         style: Styles.textStyle22,
                       ),
                       Text(
-                          course.level! ?? '',
+                          course.level!,
                         style: Styles.textStyle16,
                       ),
                       Row(
                         children: [
                           Text(
-                              course.studentNumber! ?? '',
+                              course.studentNumber!,
                             style: Styles.textStyle22,
                           ),
                           Image.asset('assets/images/profile.png')

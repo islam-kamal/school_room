@@ -13,13 +13,16 @@ final ConversationsEntity conversation;
         ListTile(
           leading: CircleAvatar(
             child: Image.asset(
-              'assets/images/Rectangle.png',
+              conversation.image,
               width: MediaQuery.of(context).size.width *0.33,
               height: MediaQuery.of(context).size.height *0.14,
             ),
             ),
             title: Text(conversation.name),
-            subtitle: Text(conversation.message),
+            subtitle: Text(
+              conversation.message,
+               overflow: TextOverflow.ellipsis,
+              ),
             trailing: Column(
               children: [
                 Text(conversation.time),

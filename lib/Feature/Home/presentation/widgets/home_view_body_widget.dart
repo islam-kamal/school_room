@@ -10,8 +10,8 @@ class HomeViewBody extends StatelessWidget{
 
   List<Son> sons = [
     Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
-    Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'level', status: false),
-    Son(name: 'name', image:  'assets/images/Rectangleee22.png', level: 'الصف الاول المتوسط', status: true),
+    Son(name: 'name', image:  'assets/images/Rectangle.png', level: 'level', status: false),
+    Son(name: 'name', image:  'assets/images/Avatar.png', level: 'الصف الاول المتوسط', status: true),
     Son(name: 'assaas0',image:  'assets/images/Rectangleee22.png',level: 'dssd',status: false)
   ];
 

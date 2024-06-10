@@ -20,7 +20,7 @@ class HomeViewDetailsBody extends StatelessWidget{
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const HomeDetailsAppBar(),
+                const HomeDetailsAppBar(),
                 const HomeDetailsAssignments(),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.013,
@@ -52,4 +52,42 @@ class HomeViewDetailsBody extends StatelessWidget{
   }
 }
 
+
+
+
+// appBar: PreferredSize(
+//             preferredSize: Size.fromHeight(70),
+//             child: AppBar(
+              
+//               elevation: 0,
+//               automaticallyImplyLeading: false,
+//               leading: Padding(
+//               padding: const EdgeInsets.symmetric(horizontal: 11),
+//               child: Row(
+//                           children: [
+//                             Image.asset('assets/images/Rectangle.png',
+//                             width: MediaQuery.of(context).size.width *0.13,
+//                             height: MediaQuery.of(context).size.height *0.14,
+//                             ),
+//                             SizedBox(
+//                               width: MediaQuery.of(context).size.width * 0.018,
+//                             ),
+//                              Column(
+//                               crossAxisAlignment: CrossAxisAlignment.start,
+//                               children: [
+//                                 Text('ايمن احمد',style: Styles.textStyle16,),
+//                                 Text('الصف الثالث المتوسط (3/1)')
+//                               ],
+//                             ),
+//                           ],
+//                         ),
+//             ),
+//               backgroundColor: Colors.white,
+//                       actions: const [
+//                         ImageIcon(
+//                           AssetImage('assets/images/UserCircle.png'),
+//                         ),
+//                       ],
+//             ),
+//           ),
 
