@@ -5,7 +5,8 @@ import 'package:school_room/Feature/Chat/presentation/widgets/chats_list_view_it
 import 'package:school_room/core/utils/index.dart';
 
 class ChatScreen extends StatelessWidget{
-
+ ChatScreen({super.key});
+ 
 final List<ConversationsEntity> conversations = [
    ConversationsEntity(
     image: 'assets/images/Rectangle.png',

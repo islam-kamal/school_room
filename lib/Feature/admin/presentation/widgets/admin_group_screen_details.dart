@@ -77,15 +77,15 @@ class AdminGroupScreenDetails extends StatelessWidget{
               child: Align(
                 alignment: Alignment.topLeft,
                 child: ImageIcon(
-                             AssetImage('assets/images/threePoints.png')
-                                     ),
-              )
-              ,
+                      AssetImage('assets/images/threePoints.png')
+                              ),
+      ),
             ),
           ],
         ),
-        body: SingleChildScrollView(child: AdminGroupScreenBody()),
-          
+        body: SingleChildScrollView(
+          child: AdminGroupScreenBody()
+          ),
        ),
        );
   }
