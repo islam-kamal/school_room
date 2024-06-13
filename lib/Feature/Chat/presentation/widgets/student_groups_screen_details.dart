@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Feature/Chat/domain/entities/group_entity.dart';
+import 'package:school_room/Feature/Chat/presentation/widgets/student_chats_group_list_view_item.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chats_group_list_view_item.dart';
+import 'package:school_room/Feature/Home/presentation/widgets/student_exams_app_bar_widget.dart';
 
-class TeacherGroupsScreenDetails extends StatelessWidget{
-    TeacherGroupsScreenDetails({super.key,});
+class StudentGroupsScreenDetails extends StatelessWidget{
+    StudentGroupsScreenDetails({super.key,});
 
 final List<GroupEntity> groups = [
    GroupEntity(
@@ -51,34 +53,23 @@ final List<GroupEntity> groups = [
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-            backgroundColor: Color(0xff03314B),
-            leading: const Padding(
-              padding: EdgeInsets.all(15),
+          elevation: 0,
+          toolbarHeight: MediaQuery.of(context).size.height * 0.08,
+          backgroundColor: Colors.white,
+          title: const StudentExamsAppBar(),
+          actions: const [
+            Padding(
+              padding: EdgeInsets.all(22),
               child: ImageIcon(
-                AssetImage('assets/images/Magnifer.png',
-                ),color: Colors.white,
-              ) ,
-            ),
-            actions: [
-              Row(
-                children: [
-                  const Text(
-                    'School-Chat',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,color: Colors.white,
-                      fontSize: 17
-                    ),),
-                  Image.asset(
-                    'assets/images/Logo.png',
-                    width: MediaQuery.of(context).size.width *0.13,
-                    height: MediaQuery.of(context).size.height *0.14,
+                AssetImage(
+                  'assets/images/notification-bing.png'
                   ),
-                ],
-              )
-            ],
-          ),
+              ),
+            ),
+          ],
+        ),
           body: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(8),
             child:  Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -98,7 +89,7 @@ final List<GroupEntity> groups = [
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: groups.length,
                             itemBuilder: (context , index){
-                              return  TeacherChatsGroupListViewItem(group: groups[index],);
+                              return StudentChatsGroupListViewItem(group: groups[index],);
                             }
                         ),
               ],

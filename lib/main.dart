@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/index_screen.dart';
+import 'package:school_room/Feature/Chat/presentation/pages/student_conversations_screen.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/teacher__conversations_screen.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/teacher_groups_screen.dart';
+import 'package:school_room/Feature/Home/presentation/pages/student_exams_and_groups_screen.dart';
+import 'package:school_room/Feature/Home/presentation/pages/tasks_screen.dart';
 import 'package:school_room/Feature/Notifications/presentation/pages/index.dart';
 import 'package:school_room/Feature/admin/presentation/pages/admin_profile_screen.dart';
 import 'package:school_room/Feature/admin/presentation/pages/admin_screen.dart';
@@ -31,7 +34,7 @@ class SchoolRoom extends StatelessWidget{
           foregroundColor: Colors.black,
           )
      ),
-      home: IndexScreen(index: 0,),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
+      home: TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
       );
   }
 }

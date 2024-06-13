@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:school_room/Feature/Chat/domain/entities/conversation_entity.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/chats_app_bar.dart';
-import 'package:school_room/Feature/Chat/presentation/widgets/chats_list_view_item_widget.dart';
+import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chats_list_view_item_widget.dart';
 import 'package:school_room/core/utils/index.dart';
 
 class ChatScreen extends StatelessWidget{
@@ -54,7 +54,7 @@ final List<ConversationsEntity> conversations = [
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: conversations.length,
                             itemBuilder: (context , index){
-                              return  ChatsListViewItem(conversation: conversations[index],);
+                              return  TeacherChatsListViewItem(conversation: conversations[index],);
                             }
                         ),
             )

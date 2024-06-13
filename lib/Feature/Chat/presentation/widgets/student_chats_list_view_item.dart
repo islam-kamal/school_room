@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:school_room/Feature/Chat/domain/entities/group_entity.dart';
+import 'package:school_room/Feature/Chat/domain/entities/conversation_entity.dart';
 
-class ChatsGroupListViewItem extends StatelessWidget{
-   const ChatsGroupListViewItem({super.key, required this.group});
+class StudentChatsListViewItem extends StatelessWidget{
+   const StudentChatsListViewItem({super.key, required this.conversation});
 
-final GroupEntity group;
+final ConversationsEntity conversation;
 
   @override
   Widget build(BuildContext context) {
@@ -12,27 +12,27 @@ final GroupEntity group;
       children: [
         ListTile(
           leading: CircleAvatar(
-            maxRadius: 29,
-            backgroundColor: Colors.white,
             child: Image.asset(
-              group.image,
+              conversation.image,
+              width: MediaQuery.of(context).size.width *0.33,
+              height: MediaQuery.of(context).size.height *0.14,
             ),
             ),
-            title: Text(group.name),
+            title: Text(conversation.name),
             subtitle: Text(
-              group.message,
+              conversation.message,
                overflow: TextOverflow.ellipsis,
               ),
             trailing: Column(
               children: [
-                Text(group.time),
+                Text(conversation.time),
                 SizedBox(
                   height: MediaQuery.of(context).size.height *0.01,
                 ),
                 Badge(
-                  backgroundColor: const Color(0xff36A690),
+                  backgroundColor: Color(0xff36A690),
                   padding: EdgeInsets.symmetric(horizontal: 6),
-                  label: Text(group.numberMessage),
+                  label: Text(conversation.numberMessage),
                   largeSize: 19,
                 ),
                 ],
