@@ -37,7 +37,7 @@ class _FatherIndexScreenState extends State<FatherIndexScreen> {
   List<Widget> _buildScreens = [
     HomeScreen(),
     TeacherChatScreen(),
-    AdminScreen(),
+    NotificationsScreen(),
     ProfileScreen()
   ];
 
@@ -60,8 +60,8 @@ class _FatherIndexScreenState extends State<FatherIndexScreen> {
             label: 'Chat',
           ),
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.tasks)),
-            label: 'Tasks',
+            child: ImageIcon(AssetImage(ImageAssets.notification)),
+            label: 'Notifications',
           ),
           CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.profile)),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/father_index_screen.dart';
 import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/student_index_screen.dart';
 import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/teacher_index_screen.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_screen_details_widget.dart';
@@ -21,7 +22,7 @@ class SchoolRoom extends StatelessWidget{
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home:  /*AdminScreenDetails()*/  TeacherIndexScreen(index: 0,),
+      home:  /*AdminScreenDetails()*/  FatherIndexScreen(index: 0,),
       );
   }
 }
