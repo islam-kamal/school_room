@@ -9,62 +9,56 @@ final CourseEntity course;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).size.height *0.007,
+    return Padding(padding: EdgeInsets.symmetric(vertical: 6),
+    child: Container(
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height *0.154,
+        decoration: BoxDecoration(
+          color: Color(0xFFCDCDCF),
+          borderRadius: BorderRadius.circular(6),
         ),
-        Container(
-          width: double.infinity,
-          height: MediaQuery.of(context).size.height *0.154,
-          decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(6),
-          ),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 8, left: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Text(
+                    course.subject!,
+                    style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    course.level!,
+                    style: TextStyle(fontSize: 16,fontWeight: FontWeight.normal),
+                  ),
+                  Row(
                     children: [
                       Text(
-                          course.subject!,
-                        style: Styles.textStyle22,
-                      ),
-                      Text(
-                          course.level!,
+                        "${ course.studentNumber!} طالب ",
                         style: Styles.textStyle16,
                       ),
-                      Row(
-                        children: [
-                          Text(
-                              course.studentNumber!,
-                            style: Styles.textStyle22,
-                          ),
-                          Image.asset('assets/images/profile.png')
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width *0.049,
-                  ),
-                  Column(
-                    children: [
-                      IconButton(
-                        color: Colors.black,
-                        onPressed: (){},
-                        icon: const Icon(Icons.more_vert),
-                      ),
+                      Image.asset('assets/images/profile.png')
                     ],
                   ),
                 ],
               ),
-            )
-        ),
-      ],
-    );
+              SizedBox(
+                width: MediaQuery.of(context).size.width *0.049,
+              ),
+              Column(
+                children: [
+                  IconButton(
+                    color: Colors.black,
+                    onPressed: (){},
+                    icon: const Icon(Icons.more_vert),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+    ),);
   }
 }
