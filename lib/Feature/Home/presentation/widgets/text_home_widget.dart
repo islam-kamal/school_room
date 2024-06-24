@@ -12,7 +12,7 @@ class TextHome extends StatelessWidget{
                   children: [
                     const Text('School-Room',
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 28,
                       fontWeight: FontWeight.bold
                       ),
                     ),

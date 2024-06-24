@@ -22,7 +22,8 @@ class NotificationsScreen extends StatelessWidget{
                 Text(
                   'الاشعارات',
                   style: Styles.textStyle16.copyWith(
-                    fontSize: 38.2,
+                    fontSize: 28.2,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
                 IconButton(

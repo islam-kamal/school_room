@@ -8,16 +8,17 @@ const Color kPrimaryColor = const Color(0xFF0E81CF);
 const Color kBlackColor = Colors.black;
 const Color kWhiteColor = const Color(0xffFFFFFF);
 const Color kGreyColor = const Color(0xff9698A9);
-const Color kGreenColor = const Color(0xFF1FBF83);
-const Color kLightGreenColor = const Color(0xFFC3FEC9);
+const Color kGreenColor = const Color(0xFF30AB8D);
+const Color kLightGreenColor = const Color(0xFFC8E8E0);
 const Color kBlueColor = const Color(0xffe3fcff);
 const Color kRedColor = const Color(0xFFFC1414);
 const Color kBackgroundColor = const Color(0xFFFCFCFC);
 const Color kInactiveColor = const Color(0xFFDBDBDB);
 const Color kTransparentColor = Colors.transparent;
 const Color kAvailableColor = const Color(0xffE0D9FF);
-const Color kUnavailableColor = const Color(0xffEBECF1);
-const Color kYellowColor = const Color(0xFFF39204);
+const Color kLightGreyColor = const Color(0xFFE4E8EE);
+const Color kYellowDarkColor = const Color(0xFFB5AF20);
+const Color kYellowLightColor = const Color(0xFFE7E2BA);
 const Color kLightRed = const Color(0xFFFEC8C3);
 const Color kAppBarBackgroundColor = const Color(0xFF03314B);
 
@@ -42,7 +43,7 @@ TextStyle primaryTextStyle = GoogleFonts.poppins(
 
 BottomNavigationBarThemeData bottomNavigationBarTheme =
     BottomNavigationBarThemeData(
-  selectedItemColor: kYellowColor,
+  selectedItemColor: kYellowDarkColor,
   unselectedItemColor: kPrimaryColor,
   showSelectedLabels: true,
   showUnselectedLabels: true,

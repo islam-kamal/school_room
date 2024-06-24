@@ -9,7 +9,6 @@ import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 import '../../../../Base/common/theme.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
-import '../../../admin/presentation/pages/admin_screen.dart';
 
 class IndexScreen extends StatefulWidget {
   int index;
@@ -38,8 +37,6 @@ class _IndexScreenState extends State<IndexScreen> {
     TeacherChatScreen(),
     NotificationsScreen(),
     ProfileScreen(),
-    AdminScreen(),
-    AdminScreen()
   ];
 
   GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();

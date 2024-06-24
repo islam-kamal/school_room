@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/core/utils/styles.dart';
 
+import '../../../../Base/common/theme.dart';
+
 class NotificationListViewItem extends StatelessWidget{
   const NotificationListViewItem({super.key});
 
   @override
 Widget build(BuildContext context) {
- return  Column(
+ return    Directionality(
+     textDirection: TextDirection.rtl,
+     child: Column(
    children: [
      Row(
         children: [
@@ -21,6 +25,8 @@ Widget build(BuildContext context) {
            Directionality(
             textDirection: TextDirection.rtl,
             child:  Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
                   height: MediaQuery.of(context).size.height *0.04,
@@ -46,13 +52,13 @@ Widget build(BuildContext context) {
       ],
       ),
      const Divider(
-       color: Colors.grey,
+       color: kLightGreyColor,
        thickness: 0.5,
        indent : 1,
        endIndent : 1,
      ),
    ],
- );
+     ) );
   
     }
 }

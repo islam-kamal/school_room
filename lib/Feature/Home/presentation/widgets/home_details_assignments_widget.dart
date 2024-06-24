@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/core/utils/styles.dart';
 
+import '../../../../Base/common/theme.dart';
+
 class HomeDetailsAssignments extends StatelessWidget{
   const HomeDetailsAssignments({super.key});
 
@@ -10,7 +12,7 @@ class HomeDetailsAssignments extends StatelessWidget{
               width: double.infinity,
               height: MediaQuery.of(context).size.height *0.14,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 189, 208, 228),
+                color: kLightGreenColor,
                 borderRadius: BorderRadius.circular(8),
               ),
               child:  Padding(padding: EdgeInsets.symmetric(vertical: 8,horizontal: 8),

@@ -10,7 +10,6 @@ import 'package:school_room/Feature/Tasks/presentation/pages/teacher_tasks_scree
 import '../../../../Base/common/theme.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
-import '../../../admin/presentation/pages/admin_screen.dart';
 
 class TeacherIndexScreen extends StatefulWidget {
   int index;

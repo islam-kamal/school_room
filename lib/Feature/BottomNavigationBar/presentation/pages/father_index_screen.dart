@@ -7,9 +7,9 @@ import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.
 import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 
 import '../../../../Base/common/theme.dart';
+import '../../../Father/Chat/presentation/pages/chat_screen.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
-import '../../../admin/presentation/pages/admin_screen.dart';
 
 class FatherIndexScreen extends StatefulWidget {
   int index;
@@ -36,7 +36,7 @@ class _FatherIndexScreenState extends State<FatherIndexScreen> {
 
   List<Widget> _buildScreens = [
     HomeScreen(),
-    TeacherChatScreen(),
+    ChatScreen(),
     NotificationsScreen(),
     ProfileScreen()
   ];

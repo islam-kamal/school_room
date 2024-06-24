@@ -9,7 +9,6 @@ import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
 import '../../../../Base/common/theme.dart';
 import '../../../Notifications/presentation/pages/notifications_screen.dart';
 import '../../../Profile/presentation/pages/profile_screen.dart';
-import '../../../admin/presentation/pages/admin_screen.dart';
 
 class StudentIndexScreen extends StatefulWidget {
   int index;
@@ -37,8 +36,6 @@ class _StudentIndexScreenState extends State<StudentIndexScreen> {
   List<Widget> _buildScreens = [
     HomeScreen(),
     TeacherChatScreen(),
-    AdminScreen(),
-    AdminScreen(),
     ProfileScreen()
   ];
 

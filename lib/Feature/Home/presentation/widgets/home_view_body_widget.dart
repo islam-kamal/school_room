@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget{
               children: [
               const TextHome(),
               SizedBox(
-                height: MediaQuery.of(context).size.height *0.01,
+                height: MediaQuery.of(context).size.height *0.05,
               ),
               
                Expanded(

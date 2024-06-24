@@ -58,6 +58,7 @@ class CachingKey extends Enum<String> {
   const CachingKey(String val) : super(val);
 
   static const CachingKey AUTH_TOKEN = CachingKey('AUTH_TOKEN');
+  static const CachingKey APP_LANGUAGE = const CachingKey('APP_LANGUAGE');
 
 }
 

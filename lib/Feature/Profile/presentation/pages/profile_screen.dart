@@ -1,23 +1,12 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatefulWidget{
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return ProfileScreenState();
-  }
+import '../widgets/profile_screen_details.dart';
 
-}
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
-class ProfileScreenState extends State<ProfileScreen>{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text("ProfileScreen"),
-      ),
-    );
+    return const ProfileScreenDetails();
   }
-
 }
