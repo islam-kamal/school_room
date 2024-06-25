@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_actions_app_bar_widget.dart';
-import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_text_field_widget.dart';
-import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_title_app_bar_widget.dart';
+import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_groups_actions_app_bar_widget.dart';
+import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_groups_text_field_widget.dart';
+import 'package:school_room/Feature/Chat/presentation/widgets/teacher_chat_groups_title_app_bar_widget.dart';
 
-class TeacherChatScreen extends StatelessWidget{
-  const TeacherChatScreen({super.key});
+class TeacherChatGroupsScreen extends StatelessWidget{
+  const TeacherChatGroupsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +15,9 @@ class TeacherChatScreen extends StatelessWidget{
           toolbarHeight: MediaQuery.of(context).size.height * 0.15,
           elevation: 0,
           backgroundColor: Colors.white,
-          title: const TeacherChatTitleAppBar(),
+          title: const TeacherChatGroupsTitleAppBar(),
           actions: const [
-            TeacherChatActionsAppBar(),
+            TeacherChatGroupsActionsAppBar(),
           ],
         ),
        body: Padding(
@@ -37,11 +37,11 @@ class TeacherChatScreen extends StatelessWidget{
                         borderRadius: BorderRadius.only(
                            bottomLeft: Radius.circular(index % 2 == 0 ? 0 : 16 ),
                             bottomRight: Radius.circular(index % 2 == 0 ? 16 : 0),
-                             topLeft: Radius.circular(16),
-                              topRight: Radius.circular(16)
+                             topLeft: const Radius.circular(16),
+                              topRight: const Radius.circular(16)
                         )
                       ),
-                      color: index % 2 == 0 ? Color(0xff042F40) : Colors.white,
+                      color: index % 2 == 0 ? const Color(0xff042F40) : Colors.white,
                       child: Padding(
                         padding: const EdgeInsets.all(12),
                         child: Container(
@@ -80,7 +80,7 @@ class TeacherChatScreen extends StatelessWidget{
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.003,
             ),
-            const TeacherChatTextField(),
+            const TeacherChatGroupsTextField(),
           ],
          ),
        ),

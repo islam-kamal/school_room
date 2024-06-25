@@ -51,101 +51,121 @@ final List<CourseEntity> courses = [
 
 
 void _showAlertDialog(BuildContext context) {
-    TextEditingController _textFieldController = TextEditingController();
+  TextEditingController _textFieldController = TextEditingController();
 
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Align(
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Align(
             alignment: Alignment.centerRight,
-            child:  Text(
-              'ادخل اسم المجموعة',
-              style: GoogleFonts.cairo(),
-              )),
-          content: Directionality(
-            textDirection: TextDirection.rtl,
-            child: Container(
-              width: double.infinity,
-               height: MediaQuery.of(context).size.height *0.1,
-           decoration: BoxDecoration(
-            color: const Color(0xffEBEBEB),
-             borderRadius: BorderRadius.circular(10),
-             
-           ),
-             child: const Padding(
-               padding: EdgeInsets.symmetric(horizontal: 10),
-               child: Column(
-                 mainAxisAlignment: MainAxisAlignment.start,
-                 crossAxisAlignment: CrossAxisAlignment.start,
-                 children: [
-                  Opacity(
-                      opacity: 0.5,
-                     child: Text('اسم المجموعة')),
-                   TextField(
-                     textAlign: TextAlign.right,
-                     autocorrect: false,
-                     autofocus: true,
-                     keyboardType: TextInputType.emailAddress,
-                     decoration:  InputDecoration(
-                       border: InputBorder.none,
+            child: Text(
+              'ارسال اشعار',
+              style:
+                  GoogleFonts.cairo(fontSize: 20, fontWeight: FontWeight.bold),
+            )),
+        content: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Container(
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.08,
+            decoration: BoxDecoration(
+              color: const Color(0xffEBEBEB),
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10 , vertical: 4),
+              child: Expanded(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 1,
+                         child: Text(
+                          'اسم المجموعة',
+                          style: GoogleFonts.cairo(
+                      color: Color(0xff6E6A7C),
+                      fontSize: 13,
                      ),
-                   )
-                 ],
-               ),
-             ),
-         ),
+                        )
+                    ),
+                    const Expanded(
+                      flex: 1,
+                      child: TextField(
+                        textAlign: TextAlign.right,
+                        autocorrect: false,
+                        autofocus: true,
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ),
-          actions: <Widget>[
-            SizedBox(
-             width: MediaQuery.of(context).size.width *0.22,
-              height: MediaQuery.of(context).size.height *0.048,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    side: const BorderSide(
-                      color: Colors.black,
-                      width: 1,
-                      ),),
-                ),
-                child: const Text(
-                  'الغاء',
-                  style: TextStyle(color: Colors.black),
-                  ),
-                onPressed: () {
-                  // You can handle the submit action here
-                  print('Entered text: ${_textFieldController.text}');
-                  Navigator.of(context).pop();
-                   },
-              ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width *0.22,
-              height: MediaQuery.of(context).size.height *0.048,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff33A88E),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+        ),
+        actions: <Widget>[
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.22,
+            height: MediaQuery.of(context).size.height * 0.048,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                  side: const BorderSide(
+                    color: Colors.black,
+                    width: 1,
                   ),
                 ),
-                child: const Text('التالي'),
-                onPressed: () {
-                  _registerSuccessfulDialog(context);
-                },
               ),
+              child: Text(
+                'الغاء',
+                style: GoogleFonts.cairo(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500
+                    ),
+              ),
+              onPressed: () {
+                // You can handle the submit action here
+                print('Entered text: ${_textFieldController.text}');
+                Navigator.of(context).pop();
+              },
             ),
-            
-          ],
-        );
-      },
-    );
-  }
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.22,
+            height: MediaQuery.of(context).size.height * 0.048,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color(0xff33A88E),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text('التالي',
+              style: GoogleFonts.cairo(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500
+                ),
+              ),
+              onPressed: () {},
+            ),
+          ),
+        ],
+      );
+    },
+  );
+}
 
 
-    void _registerSuccessfulDialog(BuildContext context) {
+
+void _registerSuccessfulDialog(BuildContext context) {
     TextEditingController _textFieldController = TextEditingController();
     showDialog(
       context: context,
@@ -198,3 +218,5 @@ void _showAlertDialog(BuildContext context) {
       },
     );
   }
+
+

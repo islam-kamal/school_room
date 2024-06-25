@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/index_screen.dart';
+import 'package:school_room/Feature/Chat/presentation/pages/index.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/student_conversations_screen.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/teacher__conversations_screen.dart';
 import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.dart';
@@ -34,7 +35,7 @@ class SchoolRoom extends StatelessWidget{
           foregroundColor: Colors.black,
           )
      ),
-      home: TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
+      home: TeacherChatScreen(),  //TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
       );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/student_tasks_title_app_bar_widget.dart';
 import 'package:school_room/Feature/Home/presentation/widgets/tasks_list_view_item.dart';
 
@@ -14,11 +13,11 @@ class TasksScreenDetails extends StatelessWidget{
       appBar: AppBar(
         toolbarHeight: 120,
         elevation: 0,
-        title: StudentTasksTitleAppBar(),
+        title: const StudentTasksTitleAppBar(),
       ),
       body: Column(
         children: [
-          Divider(
+          const Divider(
             color: Colors.grey,
             thickness: 0.5,
           ),
@@ -27,7 +26,7 @@ class TasksScreenDetails extends StatelessWidget{
             physics: const NeverScrollableScrollPhysics(),
             itemCount: 2,
             itemBuilder: (context , index){
-              return TasksListViewItem();
+              return const TasksListViewItem();
             }
             ),
         ],
