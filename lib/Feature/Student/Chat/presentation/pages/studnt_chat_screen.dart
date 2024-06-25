@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/theme.dart';
+import 'package:school_room/Feature/Student/Chat/presentation/widgets/chats_list_view_item_widget.dart';
+import 'package:school_room/Feature/Student/Chat/domain/entities/coversation_entity.dart';
 
-import '../../../../Base/utils/styles.dart';
-import '../../domain/entities/coversation_entity.dart';
-import '../widgets/chats_list_view_item_widget.dart';
+import '../../../../../Base/utils/styles.dart';
 
-class TeacherChatScreen extends StatelessWidget{
+
+class StudentChatScreen extends StatelessWidget{
   final List<ConversationsEntity> conversations = [
     ConversationsEntity(
         image: 'assets/images/Rectangle.png',

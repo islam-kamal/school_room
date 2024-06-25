@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Base/common/navigtor.dart';
+import 'package:school_room/Feature/Admin/presentation/pages/admin_screen.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_group_screen_body.dart';
 
 class AdminGroupScreenDetails extends StatelessWidget{
@@ -13,19 +15,24 @@ class AdminGroupScreenDetails extends StatelessWidget{
           toolbarHeight: 120,
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: const Padding(
+          leading:  Padding(
             padding: EdgeInsets.all(12),
             child: Align(
               alignment: Alignment.topRight,
-              child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: ImageIcon(
-                          color: Colors.black,
-                 AssetImage(
-                  'assets/images/icon_back.png',
+              child: InkWell(
+                onTap: (){
+                  customAnimatedPushNavigation(context, AdminScreen());
+                },
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: ImageIcon(
+                    color: Colors.black,
+                    AssetImage(
+                      'assets/images/icon_back.png',
+                    ),
                   ),
-                         ),
-                      ),
+                ),
+              ),
             ),
           ),
           centerTitle: true,

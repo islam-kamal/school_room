@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Feature/Admin/domain/entities/students_group_entity.dart';
+import 'package:school_room/Feature/Admin/presentation/widgets/add_student_data_dailog.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_list_view_item.dart';
 
 class AdminGroupScreenBody extends StatelessWidget{
@@ -32,12 +33,23 @@ final List<StudentGroupEntity> students = [
                   return AdminListViewItem(student: students[index],);
                 }),
                  ListTile(
-                  leading: const CircleAvatar(
+                  leading:  CircleAvatar(
                     backgroundColor: Color.fromARGB(255, 209, 209, 209),
-                    child:Icon(
-                      Icons.add,
-                      color: Colors.black,
+                    child:InkWell(
+                      onTap: (){
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AddStudentDataDialog(
+                            );
+                          },
+                        );
+                      },
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.black,
                       ),
+                    ),
                   ),
                   title: Text(
                     'اضافة طالب',

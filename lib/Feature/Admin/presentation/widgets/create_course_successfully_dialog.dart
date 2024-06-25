@@ -5,6 +5,8 @@ import '../../../../Base/common/shared.dart';
 import '../../../../Base/common/theme.dart';
 
 class CreateCourseSuccessfullyDialog extends StatelessWidget {
+  final String message;
+  CreateCourseSuccessfullyDialog({required this.message});
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -19,10 +21,10 @@ class CreateCourseSuccessfullyDialog extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset('assets/images/succes-validation-nxPvtk8St9.png'),
-                const Align(
+                 Align(
                   alignment: Alignment.center,
                   child: Text(
-                    'تم انشاء المجموعة بنجاح',
+                  message,
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
                 ),

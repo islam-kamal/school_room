@@ -48,7 +48,7 @@ class ChatScreen extends StatelessWidget{
                       fontWeight: FontWeight.bold,color: kWhiteColor,
                     fontSize: 17
                   ),),
-                Image.asset('assets/images/logo.png',
+                Image.asset('assets/images/chat_img.png',
                   width: MediaQuery.of(context).size.width *0.13,
                   height: MediaQuery.of(context).size.height *0.14,
                 ),

@@ -1,7 +1,7 @@
 const String imagePath = "assets/images";
 
 class ImageAssets {
-  static const String logo = "$imagePath/logo.png";
+  static const String logo = "$imagePath/chat_img.png";
   static const String splash = "$imagePath/splash.png";
   static const String splash_logo = "$imagePath/splash_logo.png";
   static const String profile = "$imagePath/profile.png";

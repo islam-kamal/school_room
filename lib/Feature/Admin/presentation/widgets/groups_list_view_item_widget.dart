@@ -4,6 +4,7 @@ import 'package:school_room/Feature/Admin/domain/entities/course_entity.dart';
 import 'package:school_room/core/utils/styles.dart';
 
 import '../pages/admin_group_screen.dart';
+import 'add_students_to_course_Dialog.dart';
 
 class GroupsListViewItem extends StatelessWidget{
   const GroupsListViewItem({super.key, required this.course});
@@ -61,7 +62,15 @@ final CourseEntity course;
                      children: [
                        IconButton(
                          color: Colors.black,
-                         onPressed: (){},
+                         onPressed: (){
+                           showDialog(
+                             context: context,
+                             builder: (BuildContext context) {
+                               return  AddStudentsToCourseDialog();
+                             },
+                           );
+
+                         },
                          icon: const Icon(Icons.more_vert),
                        ),
                      ],
