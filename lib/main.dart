@@ -13,6 +13,8 @@ import 'package:school_room/Feature/admin/presentation/pages/admin_screen.dart';
 import 'package:school_room/Feature/admin/presentation/pages/admin_group_screen.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_screen_details_widget.dart';
 
+import 'Feature/admin/presentation/pages/test.dart';
+
 
 
 void main() {
@@ -35,7 +37,7 @@ class SchoolRoom extends StatelessWidget{
           foregroundColor: Colors.black,
           )
      ),
-      home: TasksScreen(),   //TeacherChatScreen(),   //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
+      home: TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
       );
   }
 }

@@ -4,25 +4,27 @@ import 'package:school_room/Feature/admin/domain/entities/course_entity.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_app_bar.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/groups_list_view_item_widget.dart';
 
+import '../../../../core/utils/styles.dart';
+
 class AdminScreenDetails extends StatelessWidget{
    AdminScreenDetails({super.key});
 final List<CourseEntity> courses = [
-  CourseEntity('Arabic', 'tow', '20'),
-  CourseEntity('English', 'four', '27'),
-  CourseEntity('Math', 'five', '24'),
-  CourseEntity('Arabic', 'tow', '33'),
+  CourseEntity('مجموعة اللغة العربية', 'الصف الثالث المتوسط (3/4)', '20'),
+  CourseEntity('مجموعة الرياضيات ', 'الصف الثالث المتوسط (3/4)', '27'),
+  CourseEntity('مجموعة اللغة الانجليزية', 'الصف الثالث المتوسط (3/4)', '24'),
+  CourseEntity('مجموعة العلوم', 'الصف الثالث المتوسط (3/4)', '33'),
 ];
   @override
   Widget build(BuildContext context) {
     return  Directionality(
         textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: AdminAppBar(),
         body:  Padding(
-          padding: const EdgeInsets.only(top: 44,left: 4, right: 6),
+          padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const AdminAppBar(),
                 ListView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),

@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/core/utils/styles.dart';
 
-class AdminAppBar extends StatelessWidget{
-  const AdminAppBar({super.key});
-
+class AdminAppBar extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-                flex: 0,
+    return PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight),
+        child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Color(0xFFCDCDCD),
+                  width: 2.0, // Set the border width here
+                ),
+              ),
+            ),
+            child: AppBar(
+              leading: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5),
                 child: Row(
                   children: [
                     Image.asset('assets/images/Rectangle.png',
@@ -35,36 +40,35 @@ class AdminAppBar extends StatelessWidget{
                       ],
                     ),
                   ],
-                )
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.17,
-            ),
-            Expanded(
-              flex: 1,
-              child: Row(
-                children: [
-                  Text(
+                ),
+              ),
+              leadingWidth: MediaQuery.of(context).size.width * 0.5,
+              actions: [
+                Row(
+                  children: [
+                    Text(
                       'School-Room',
-                    style: Styles.textStyle16.copyWith(
-                      fontSize: 16.5,
-                      fontWeight: FontWeight.bold
+                      style: Styles.textStyle16.copyWith(
+                          fontSize: 16.5,
+                          fontWeight: FontWeight.bold
+                      ),
                     ),
-                  ),
-                  Image.asset(
+                    Image.asset(
                       'assets/images/Group.png',
-                    width: MediaQuery.of(context).size.width *0.15,
-                  ),
-                ],
-              )
-            ),
-          ],
-        ),
-        const Divider(
-          color: Colors.grey,
-          thickness: 0.5,
-        ),
-      ],
-    );
+                      width: MediaQuery.of(context).size.width *0.15,
+                    ),
+                  ],
+                ),
+              ],
+            )
+        ));
   }
+
+  @override
+  final Size preferredSize;
+
+  AdminAppBar({Key? key})
+      : preferredSize = Size.fromHeight(65),
+        super(key: key);
+
 }
