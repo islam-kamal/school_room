@@ -37,7 +37,7 @@ class SchoolRoom extends StatelessWidget{
           foregroundColor: Colors.black,
           )
      ),
-      home: TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),  //TeacherChatScreen(),    //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
+      home: TeacherChatScreen(),    //TasksScreen(),  //StudentConversationsScreen(),  //StudentExamsAndGroupsScreen(),//AdminProfileScreen(),   //AdminProfileScreen(),        //TeacherGroupsScreen(), //TeacherConversationsScreen(), // StudentsGroupScreen(), //AdminScreen(), //IndexScreen(index: 0,) 
       );
   }
 }

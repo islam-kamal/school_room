@@ -28,7 +28,8 @@ class TasksFinishListViewItem extends StatelessWidget{
                       Text(
                         'واجب اللغة العربية',
                         style: GoogleFonts.cairo(
-                          fontSize: 23.3
+                         fontWeight: FontWeight.w400,
+                              fontSize: 22
                         ),
                         ),
                         Text(
@@ -48,10 +49,15 @@ class TasksFinishListViewItem extends StatelessWidget{
                           Image.asset(
                             'assets/images/Ellipse31.png',
                             width: 20,
-                            height: 10,
+                            height: 12,
                             ),
-                          const Text(
+                          Text(
                             'لم يتم التسليم ',
+                            style: GoogleFonts.cairo(
+                              color: Colors.black,
+                              fontSize: 16.11,
+                              fontWeight: FontWeight.w400
+                            ),
                             ),
                             
                         ],

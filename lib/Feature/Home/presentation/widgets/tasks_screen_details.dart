@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/Feature/Chat/presentation/widgets/student_tasks_title_app_bar_widget.dart';
 import 'package:school_room/Feature/Home/presentation/widgets/tasks_assignment_list_view_item.dart';
+import 'package:school_room/Feature/Home/presentation/widgets/tasks_done_list_view_item.dart';
 import 'package:school_room/Feature/Home/presentation/widgets/tasks_finish_list_view_item.dart';
 
 class TasksScreenDetails extends StatelessWidget{
@@ -16,21 +17,23 @@ class TasksScreenDetails extends StatelessWidget{
         elevation: 0,
         title: const StudentTasksTitleAppBar(),
       ),
-      body: Column(
-        children: [
-          const Divider(
-            color: Colors.grey,
-            thickness: 1,
-          ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: 2,
-            itemBuilder: (context , index){
-              return const TasksAssignmentListViewItem();   //TasksFinishListViewItem();    //TasksDoneListViewItem(),
-            }
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const Divider(
+              color: Colors.grey,
+              thickness: 1,
             ),
-        ],
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: 2,
+              itemBuilder: (context , index){
+                return const TasksDoneListViewItem();  //TasksAssignmentListViewItem();   //TasksFinishListViewItem();    
+              }
+              ),
+          ],
+        ),
       ),
      ),
      );

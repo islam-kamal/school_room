@@ -28,7 +28,8 @@ class TasksAssignmentListViewItem extends StatelessWidget{
                       Text(
                         'امتحان اللغة العربية',
                         style: GoogleFonts.cairo(
-                          fontSize: 23.3
+                          fontWeight: FontWeight.w400,
+                              fontSize: 22
                         ),
                         ),
                         Text(

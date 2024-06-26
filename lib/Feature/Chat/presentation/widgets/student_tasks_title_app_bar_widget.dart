@@ -40,11 +40,9 @@ Color _textColorContainer3  = Colors.black;
               ),
               child: const CircleAvatar(
                     backgroundColor: Colors.white,
-                    child: ImageIcon(
+                    child: Icon(
+                      Icons.arrow_back,
                       color: Colors.black,
-              AssetImage(
-              'assets/images/icon_back.png',
-              ),
                       ),
                   ),
             ),

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart'as intl;
 
-class TeacherChatTextField extends StatelessWidget {
+class TeacherChatTextField extends StatefulWidget {
   const TeacherChatTextField({super.key});
 
+  @override
+  State<TeacherChatTextField> createState() => _TeacherChatTextFieldState();
+}
+
+class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,8 +23,8 @@ class TeacherChatTextField extends StatelessWidget {
             foregroundColor: Colors.white,
             child: IconButton(
               onPressed: () {
-                // _showAlertDialogExamDegree(context);
-                _showAlertDialogStudentDetails(context);
+                _showAlertDialogExamDegree(context);
+                // _showAlertDialogStudentDetails(context);
               },
               icon: const ImageIcon(AssetImage('assets/images/send.png')),
               tooltip: 'ارسال',
@@ -84,6 +90,7 @@ class TeacherChatTextField extends StatelessWidget {
 void _showAlertDialogExamDegree(BuildContext context) {
   TextEditingController _textFieldController = TextEditingController();
 
+// final formatter = intl.DateFormat.yMd();
 
   showDialog(
     context: context,
@@ -199,8 +206,20 @@ void _showAlertDialogExamDegree(BuildContext context) {
                                 children: [
                                   Expanded(
                                       flex: 1,
-                                      child: Image.asset(
-                                          'assets/images/calendarr.png')),
+                                      child: InkWell(
+                                        onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
+                                        child: Image.asset(
+                                            'assets/images/calendarr.png'),
+                                      )),
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width * 0.01,
                                   ),
@@ -233,7 +252,16 @@ void _showAlertDialogExamDegree(BuildContext context) {
                                   Expanded(
                                     flex: 1,
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
                                       child: const ImageIcon(
                                         AssetImage('assets/images/ArrowDown.png'),
                                       ),
@@ -264,9 +292,16 @@ void _showAlertDialogExamDegree(BuildContext context) {
                                   Expanded(
                                       flex: 1,
                                       child: InkWell(
-                                        onTap: (){
-                                          
-                                        },
+                                        onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
                                         child: Image.asset(
                                             'assets/images/calendarr.png'),
                                       )),
@@ -302,7 +337,16 @@ void _showAlertDialogExamDegree(BuildContext context) {
                                   Expanded(
                                     flex: 1,
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
                                       child: const ImageIcon(
                                         AssetImage('assets/images/ArrowDown.png'),
                                       ),
@@ -590,8 +634,20 @@ void _showAlertDialogExamPrepare(BuildContext context) {
                                 children: [
                                   Expanded(
                                       flex: 1,
-                                      child: Image.asset(
-                                          'assets/images/calendarr.png')),
+                                      child: InkWell(
+                                        onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
+                                        child: Image.asset(
+                                            'assets/images/calendarr.png'),
+                                      )),
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width * 0.01,
                                   ),
@@ -624,7 +680,16 @@ void _showAlertDialogExamPrepare(BuildContext context) {
                                   Expanded(
                                     flex: 1,
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
                                       child: const ImageIcon(
                                         AssetImage('assets/images/ArrowDown.png'),
                                       ),
@@ -654,8 +719,20 @@ void _showAlertDialogExamPrepare(BuildContext context) {
                                 children: [
                                   Expanded(
                                       flex: 1,
-                                      child: Image.asset(
-                                          'assets/images/calendarr.png')),
+                                      child: InkWell(
+                                        onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
+                                        child: Image.asset(
+                                            'assets/images/calendarr.png'),
+                                      )),
                                   SizedBox(
                                     width: MediaQuery.of(context).size.width * 0.01,
                                   ),
@@ -688,7 +765,16 @@ void _showAlertDialogExamPrepare(BuildContext context) {
                                   Expanded(
                                     flex: 1,
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: ()async{
+                      final now = DateTime.now();
+                      final firstDate = DateTime(now.year-1 ,now.month ,now.day);
+                      final DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                       initialDate: now,
+                        firstDate: firstDate,
+                         lastDate: now,
+                         );
+                    },
                                       child: const ImageIcon(
                                         AssetImage('assets/images/ArrowDown.png'),
                                       ),
