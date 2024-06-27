@@ -3,10 +3,11 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/image_manger.dart';
 
-import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.dart';
+import 'package:school_room/Feature/Student/Chat/presentation/pages/student_chat_screen.dart';
+import 'package:school_room/Feature/Student/Groups/presentation/pages/student_groups_screen.dart';
 import 'package:school_room/Feature/Student/Home/presentation/pages/student_exams_and_groups_screen.dart';
 import 'package:school_room/Feature/Student/Profile/presentation/pages/profile_screen.dart';
-import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
+import 'package:school_room/Feature/Student/Tasks/presentation/pages/student_tasks_screen.dart';
 
 import '../../../../../Base/common/theme.dart';
 
@@ -35,7 +36,9 @@ class _StudentIndexScreenState extends State<StudentIndexScreen> {
 
   List<Widget> _buildScreens = [
     StudentExamsAndGroupsScreen(),
-    TeacherChatScreen(),
+    StudentChatScreen(),
+    StudentGroupsScreen(),
+    StudentTasksScreen(),
     ProfileScreen()
   ];
 

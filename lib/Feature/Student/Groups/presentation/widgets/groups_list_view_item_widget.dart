@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Student/Chat/domain/entities/coversation_entity.dart';
 
-class ChatsListViewItem extends StatelessWidget{
-  const ChatsListViewItem({super.key, required this.conversation});
+class GroupsListViewItem extends StatelessWidget{
+  const GroupsListViewItem({super.key, required this.conversation});
 
   final ConversationsEntity conversation;
 
@@ -21,7 +21,7 @@ class ChatsListViewItem extends StatelessWidget{
             ),
           ),
           title: Text(conversation.name),
-          subtitle: Text(conversation.message,style: TextStyle(color: kGreenColor)),
+          subtitle: Text(conversation.message,style: TextStyle(color: kBlueColor),),
           trailing: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -31,7 +31,7 @@ class ChatsListViewItem extends StatelessWidget{
                 height: MediaQuery.of(context).size.height *0.01,
               ),
               Badge(
-                backgroundColor: kGreenColor,
+                backgroundColor: kBlueColor,
                 padding: EdgeInsets.symmetric(horizontal: 5),
                 label: Text(conversation.numberMessage),
                 largeSize: 19,

@@ -76,7 +76,7 @@ _takePicture() async{
                   ),
                 ),
                 Text(
-              'مدير الIT',
+              ' طالب',
               style: GoogleFonts.cairo(
                 fontSize: 16,
                 fontWeight: FontWeight.bold

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Feature/Student/Home/domain/entities/assignment_entity.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/student_assignments_widget.dart';
-import 'package:school_room/Feature/Student/Home/presentation/widgets/student_exams_app_bar_widget.dart';
+import 'package:school_room/Feature/Student/Home/presentation/widgets/student_home_app_bar_widget.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/student_exams_list_view_item_widget.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/student_exams_widget.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/student_groups_list_view_item_widget.dart';
@@ -39,22 +39,7 @@ final List<AssignmentEntity> assignments = [
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          toolbarHeight: MediaQuery.of(context).size.height * 0.08,
-          backgroundColor: Colors.white,
-          title: const StudentExamsAppBar(),
-          actions: const [
-            Padding(
-              padding: EdgeInsets.all(22),
-              child: ImageIcon(
-                AssetImage(
-                  'assets/images/notification-bing.png'
-                  ),
-              ),
-            ),
-          ],
-        ),
+        appBar:  StudentHomeAppBar(),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8 , vertical: 11),
