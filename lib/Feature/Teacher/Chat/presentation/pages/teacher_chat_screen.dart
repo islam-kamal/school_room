@@ -3,26 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Student/Chat/presentation/widgets/chats_list_view_item_widget.dart';
 import 'package:school_room/Feature/Student/Chat/domain/entities/coversation_entity.dart';
-import 'package:school_room/Feature/Student/Groups/presentation/widgets/groups_list_view_item_widget.dart';
 
 import '../../../../../Base/utils/styles.dart';
 
 
-class StudentGroupsScreen extends StatelessWidget{
+class TeacherChatScreen extends StatelessWidget{
   final List<ConversationsEntity> conversations = [
     ConversationsEntity(
         image: 'assets/images/Rectangle.png',
-        name: 'فصل 3/1 المتوسط',
-        message: 'اشكرك كثيرا! ,أتمنى لك يوماً عظيماً! ,😊',
-        time: '20:6',
-        numberMessage: '15'
+        name: 'أ/ احمد محمد',
+        message: 'عظيم، شكرا جزيلا! ,💫',
+        time: '22:6',
+        numberMessage: '8'
     ),
     ConversationsEntity(
         image: 'assets/images/Rectangle.png',
-        name: 'فصل 3/3 المتوسط',
-        message: 'نقدر ذلك! ,اراك قريبا! ,🚀',
-        time: '12:6',
-        numberMessage: '45'
+        name: 'ساره وليد ',
+        message: 'مرحبا! ,🎉',
+        time: '22:6',
+        numberMessage: '5'
     ),
   ];
 
@@ -66,7 +65,7 @@ class StudentGroupsScreen extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'المجموعات',
+                'المحادثات',
                 style: Styles.textStyle24.copyWith(
                     fontSize: 24,
                     fontWeight: FontWeight.bold
@@ -77,7 +76,7 @@ class StudentGroupsScreen extends StatelessWidget{
                   physics: const NeverScrollableScrollPhysics(),
                   itemCount: conversations.length,
                   itemBuilder: (context , index){
-                    return GroupsListViewItem(conversation: conversations[index],);
+                    return ChatsListViewItem(conversation: conversations[index],);
                   }
               ),
             ],

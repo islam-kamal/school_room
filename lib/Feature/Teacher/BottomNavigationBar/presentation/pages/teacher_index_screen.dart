@@ -2,14 +2,13 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/image_manger.dart';
+import 'package:school_room/Base/common/theme.dart';
+import 'package:school_room/Feature/Teacher/Chat/presentation/pages/teacher_chat_screen.dart';
 
-import 'package:school_room/Feature/Chat/presentation/pages/teacher_chat_screen.dart';
-import 'package:school_room/Feature/Home/presentation/pages/home_view.dart';
-import 'package:school_room/Feature/Tasks/presentation/pages/teacher_tasks_screen.dart';
+import 'package:school_room/Feature/Teacher/Tasks/presentation/pages/teacher_tasks_screen.dart';
+import 'package:school_room/Feature/Teacher/Groups/presentation/pages/teacher_groups_screen.dart';
 
-import '../../../../Base/common/theme.dart';
-import '../../../Notifications/presentation/pages/notifications_screen.dart';
-import '../../../Profile/presentation/pages/profile_screen.dart';
+import '../../../../Teacher/Profile/presentation/pages/profile_screen.dart';
 
 class TeacherIndexScreen extends StatefulWidget {
   int index;
@@ -35,10 +34,9 @@ class _TeacherIndexScreenState extends State<TeacherIndexScreen> {
   }
 
   List<Widget> _buildScreens = [
+    TeacherGroupsScreen(),
     TeacherChatScreen(),
-    HomeScreen(),
     TeacherTasksScreen(),
-
     ProfileScreen()
   ];
 
@@ -53,13 +51,14 @@ class _TeacherIndexScreenState extends State<TeacherIndexScreen> {
         index: 0,
         items: [
           CurvedNavigationBarItem(
-            child: ImageIcon(AssetImage(ImageAssets.chat_icon)),
-            label: 'Chat',
-          ),
-          CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.groups)),
             label: 'Groups',
           ),
+          CurvedNavigationBarItem(
+            child: ImageIcon(AssetImage(ImageAssets.chat_icon)),
+            label: 'Chat',
+          ),
+
           CurvedNavigationBarItem(
             child: ImageIcon(AssetImage(ImageAssets.tasks)),
             label: 'Tasks',

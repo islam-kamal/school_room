@@ -10,6 +10,7 @@ import 'package:localize_and_translate/localize_and_translate.dart';
 import 'package:school_room/Feature/Admin/presentation/pages/admin_screen.dart';
 import 'package:school_room/Feature/BottomNavigationBar/presentation/pages/father_index_screen.dart';
 import 'package:school_room/Feature/Student/BottomNavigationBar/presentation/pages/student_index_screen.dart';
+import 'package:school_room/Feature/Teacher/BottomNavigationBar/presentation/pages/teacher_index_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Base/common/shared.dart';
@@ -124,7 +125,7 @@ class MyMaterialState extends State<MyMaterial> {
             DefaultCupertinoLocalizations.delegate,
           ],
 
-          home: StudentIndexScreen(index: 0,),
+          home: TeacherIndexScreen(index: 0,),
         );
       },
     );

@@ -76,7 +76,7 @@ _takePicture() async{
                   ),
                 ),
                 Text(
-              ' معلم لغة عربية',
+              ' طالب',
               style: GoogleFonts.cairo(
                 fontSize: 16,
                 fontWeight: FontWeight.bold
