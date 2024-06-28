@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart'as intl;
+import 'package:school_room/Feature/Chat/presentation/widgets/popup_menu_of_icon_add.dart';
 
 class TeacherChatTextField extends StatefulWidget {
   const TeacherChatTextField({super.key});
@@ -54,7 +55,7 @@ class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
             ),
           ),
           SizedBox(
-            width: MediaQuery.of(context).size.width * 0.02,
+            width: MediaQuery.of(context).size.width * 0.01,
           ),
           CircleAvatar(
             backgroundColor: Color(0xff36A690),
@@ -70,15 +71,21 @@ class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {
-              _showAlertDialogExamQuestion(context);
-            },
-            icon: const Icon(
-              Icons.add,
-              color: Color(0xff36A690),
-            ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.02,
           ),
+          MyPopupMenuButton(),
+          // PopupMenuOfIconAdd(),
+
+          // IconButton(
+          //   onPressed: () {
+          //     _showAlertDialogExamQuestion(context);
+          //   },
+          //   icon: const Icon(
+          //     Icons.add,
+          //     color: Color(0xff36A690),
+          //   ),
+          // ),
         ],
       ),
     );
@@ -89,8 +96,6 @@ class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
 
 void _showAlertDialogExamDegree(BuildContext context) {
   TextEditingController _textFieldController = TextEditingController();
-
-// final formatter = intl.DateFormat.yMd();
 
   showDialog(
     context: context,

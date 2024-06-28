@@ -1,5 +1,13 @@
+export 'assignments_done_and_not_correct_list_view_item.dart';
 export 'assignments_list_view_item_widget.dart';
 export 'custom_bottom_navigation_bar_widget.dart';
+export 'degrees_list_view_item.dart';
+export 'degrees_of_exams_widget.dart';
+export 'exams_done_and_not_correct_list_view_item.dart';
+export 'exams_done_widget.dart';
+export 'exams_not_corrected_widget.dart';
+export 'exam_degrees_screen_details.dart';
+export 'exam_degrees_screen_title_app_bar.dart';
 export 'grid_view_item_widget.dart';
 export 'home_details_app_bar_widget.dart';
 export 'home_details_assignments_widget.dart';
@@ -16,4 +24,5 @@ export 'tasks_done_list_view_item.dart';
 export 'tasks_finish_list_view_item.dart';
 export 'tasks_screen_details.dart';
 export 'text_home_widget.dart';
+export 'three_container_in_degrees.dart';
 

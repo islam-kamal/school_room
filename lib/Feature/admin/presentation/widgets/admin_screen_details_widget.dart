@@ -4,7 +4,6 @@ import 'package:school_room/Feature/admin/domain/entities/course_entity.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/admin_app_bar.dart';
 import 'package:school_room/Feature/admin/presentation/widgets/groups_list_view_item_widget.dart';
 
-import '../../../../core/utils/styles.dart';
 
 class AdminScreenDetails extends StatelessWidget{
    AdminScreenDetails({super.key});
@@ -168,7 +167,6 @@ void _showAlertDialog(BuildContext context) {
 
 
 void _registerSuccessfulDialog(BuildContext context) {
-    TextEditingController _textFieldController = TextEditingController();
     showDialog(
       context: context,
       builder: (BuildContext context) {

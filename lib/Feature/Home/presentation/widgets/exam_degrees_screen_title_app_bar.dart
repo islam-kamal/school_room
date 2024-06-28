@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class StudentTasksTitleAppBar extends StatefulWidget{
-  const StudentTasksTitleAppBar({super.key});
+class ExamDegreesScreenTitleAppBar extends StatefulWidget{
+  const ExamDegreesScreenTitleAppBar({super.key});
 
   @override
-  State<StudentTasksTitleAppBar> createState() => _StudentTasksTitleAppBarState();
+  State<ExamDegreesScreenTitleAppBar> createState() => _ExamDegreesScreenTitleAppBarState();
 }
 
-class _StudentTasksTitleAppBarState extends State<StudentTasksTitleAppBar> {
+class _ExamDegreesScreenTitleAppBarState extends State<ExamDegreesScreenTitleAppBar> {
 
 Color _colorContainer1  = Colors.white;
 Color _colorContainer2  = Colors.white;
@@ -17,61 +17,16 @@ Color _textColorContainer1  = const Color(0xff717171);
 Color _textColorContainer2  = const Color(0xff717171);
 Color _textColorContainer3  = const Color(0xff717171);
 
-
-
   @override
   Widget build(BuildContext context) {
-    return Column(
-            children: [
-               Row(
-                children: [
-                   Align(
-            alignment: Alignment.topRight,
-            child: Container(
-               decoration: BoxDecoration(
-                 borderRadius: BorderRadius.circular(35),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    blurRadius: 2,
-                    offset: const Offset(0, 0.5),
-                  ),
-                ],
-              ),
-              child: const CircleAvatar(
-                    backgroundColor: Colors.white,
-                    child: Icon(
-                      Icons.arrow_back,
-                      color: Colors.black,
-                      ),
-                  ),
-            ),
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.27,
-          ),
-          Text(
-            'المهام',
-            style: GoogleFonts.cairo(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-            ),
-            ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
-              ),
-            Padding(
-              padding: const EdgeInsets.only(right: 11 , left: 11 , top: 12),
-              child: Row(
+    return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   InkWell(
                     onTap: (){
                         setState(() {
                       _colorContainer1 = _colorContainer1 == Colors.white ? 
-                            const Color.fromARGB(255, 87, 168, 235) : 
+                            const Color(0xff4285F4) : 
                             Colors.white;
                             // _textColorContainer1 = _textColorContainer1 == const Color(0xff717171), ? 
                             // Colors.white : 
@@ -79,68 +34,10 @@ Color _textColorContainer3  = const Color(0xff717171);
                     });
                     },
                     child: Container(
-                      width: MediaQuery.of(context).size.width * 0.24,
+                      width: MediaQuery.of(context).size.width * 0.25,
                       height: MediaQuery.of(context).size.height * 0.048,
                       decoration: BoxDecoration(
                         color: _colorContainer1,
-                        borderRadius: BorderRadius.circular(6)
-                      ),
-                      child: Center(
-                        child: Text(
-                          'مكلف',
-                          style: GoogleFonts.cairo(
-                            fontSize: 21,
-                            color: _textColorContainer1,
-                          ),
-                          ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                       setState(() {
-                      _colorContainer2 = _colorContainer2 == Colors.white ? 
-                            const Color.fromARGB(255, 255, 101, 90) : 
-                            Colors.white;
-                            // _textColorContainer2 = _textColorContainer2 == const Color(0xff717171), ? 
-                            // Colors.white : 
-                            // const Color(0xff717171),;
-                    });
-                    },
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.24,
-                      height: MediaQuery.of(context).size.height * 0.048,
-                      decoration: BoxDecoration(
-                        color: _colorContainer2,
-                        borderRadius: BorderRadius.circular(6)
-                      ),
-                      child: Center(
-                        child: Text(
-                          'انتهى',
-                          style: GoogleFonts.cairo(
-                            fontSize: 21,
-                            color: _textColorContainer1,
-                          ),
-                          ),
-                      ),
-                    ),
-                  ),
-                  InkWell(
-                    onTap: (){
-                       setState(() {
-                      _colorContainer3 = _colorContainer3 == Colors.white ? 
-                            const Color(0xff31AB8D) : 
-                            Colors.white;
-                            // _textColorContainer3 = _textColorContainer3 == const Color(0xff717171), ? 
-                            // Colors.white : 
-                            // const Color(0xff717171),;
-                    });
-                    },
-                    child: Container(
-                      width: MediaQuery.of(context).size.width * 0.24,
-                      height: MediaQuery.of(context).size.height * 0.048,
-                      decoration: BoxDecoration(
-                        color:  _colorContainer3,
                         borderRadius: BorderRadius.circular(6)
                       ),
                       child: Center(
@@ -154,10 +51,65 @@ Color _textColorContainer3  = const Color(0xff717171);
                       ),
                     ),
                   ),
+                  InkWell(
+                    onTap: (){
+                       setState(() {
+                      _colorContainer2 = _colorContainer2 == Colors.white ? 
+                            Color(0xffE82F2F) : 
+                            Colors.white;
+                            // _textColorContainer2 = _textColorContainer2 == const Color(0xff717171), ? 
+                            // Colors.white : 
+                            // const Color(0xff717171),;
+                    });
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      height: MediaQuery.of(context).size.height * 0.048,
+                      decoration: BoxDecoration(
+                        color: _colorContainer2,
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                      child: Center(
+                        child: Text(
+                          'لم تصحح',
+                          style: GoogleFonts.cairo(
+                            fontSize: 22,
+                            color: _textColorContainer1,
+                          ),
+                          ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: (){
+                       setState(() {
+                      _colorContainer3 = _colorContainer3 == Colors.white ? 
+                            const Color(0xff36A690) : 
+                            Colors.white;
+                            // _textColorContainer3 = _textColorContainer3 == const Color(0xff717171) ? 
+                            // Colors.white : 
+                            // const Color(0xff717171);
+                    });
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.25,
+                      height: MediaQuery.of(context).size.height * 0.048,
+                      decoration: BoxDecoration(
+                        color:  _colorContainer3,
+                        borderRadius: BorderRadius.circular(6)
+                      ),
+                      child: Center(
+                        child: Text(
+                          'الدرجات',
+                          style: GoogleFonts.cairo(
+                            fontSize: 22,
+                            color: _textColorContainer1,
+                          ),
+                          ),
+                      ),
+                    ),
+                  ),
                 ],
-              ),
-            ),
-            ],
-          );
+              );
   }
 }
