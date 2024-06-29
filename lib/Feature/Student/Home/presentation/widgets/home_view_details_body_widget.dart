@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_room/Feature/Home/presentation/widgets/assignments_list_view_item_widget.dart';
+import 'package:school_room/Feature/Student/Home/presentation/widgets/assignments_list_view_item_widget.dart';
 import 'package:school_room/core/utils/index.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/home_details_app_bar_widget.dart';
 

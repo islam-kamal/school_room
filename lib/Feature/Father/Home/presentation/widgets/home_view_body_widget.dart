@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/Feature/Father/Home/domain/entities/entities/son.dart';
 import 'package:school_room/Feature/Father/Home/presentation/widgets/grid_view_item_widget.dart';
-import 'package:school_room/Feature/Home/presentation/widgets/text_home_widget.dart';
+import 'package:school_room/Feature/Father/Home/presentation/widgets/text_home_widget.dart';
+
 
 
 class HomeViewBody extends StatelessWidget{

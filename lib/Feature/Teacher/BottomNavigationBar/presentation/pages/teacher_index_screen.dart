@@ -70,7 +70,7 @@ class _TeacherIndexScreenState extends State<TeacherIndexScreen> {
         ],
         color: Colors.white,
         buttonBackgroundColor: kWhiteColor,
-        backgroundColor: kAppBarBackgroundColor,
+        backgroundColor: kGreenColor,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: _onItemTapped,

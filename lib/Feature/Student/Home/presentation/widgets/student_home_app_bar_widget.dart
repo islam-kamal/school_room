@@ -57,7 +57,7 @@ class StudentHomeAppBar extends StatelessWidget implements PreferredSizeWidget{
             padding: EdgeInsets.all(22),
             child: ImageIcon(
               AssetImage(
-                  'assets/images/notification-bing.png'
+                  'assets/images/notificationbing.png'
               ),
             ),
           ),

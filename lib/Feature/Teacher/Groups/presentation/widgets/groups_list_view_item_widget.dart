@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/navigtor.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Teacher/Chat/domain/entities/coversation_entity.dart';
-import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_group_students.dart';
+import 'package:school_room/Feature/Teacher/Groups/presentation/pages/teacher_group_conversation_screen.dart';
 
 class GroupsListViewItem extends StatelessWidget{
   const GroupsListViewItem({super.key, required this.conversation});
@@ -13,7 +13,7 @@ class GroupsListViewItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        customAnimatedPushNavigation(context, TeacherGroupStudents());
+        customAnimatedPushNavigation(context, TeacherGroupConversationScreen());
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -22,7 +22,7 @@ class GroupsListViewItem extends StatelessWidget{
           ListTile(
             leading: CircleAvatar(
               child: Image.asset(
-                'assets/images/Rectangle.png',
+                '${conversation.image}',
                 width: MediaQuery.of(context).size.width *0.33,
               ),
             ),

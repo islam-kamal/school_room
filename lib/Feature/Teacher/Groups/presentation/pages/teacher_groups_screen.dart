@@ -10,14 +10,14 @@ import '../../../../../Base/utils/styles.dart';
 class TeacherGroupsScreen extends StatelessWidget{
   final List<ConversationsEntity> conversations = [
     ConversationsEntity(
-        image: 'assets/images/Rectangle.png',
+        image: 'assets/images/course.png',
         name: 'فصل 3/1 المتوسط',
         message: 'اشكرك كثيرا! ,أتمنى لك يوماً عظيماً! ,😊',
         time: '20:6',
         numberMessage: '15'
     ),
     ConversationsEntity(
-        image: 'assets/images/Rectangle.png',
+        image: 'assets/images/course.png',
         name: 'فصل 3/3 المتوسط',
         message: 'نقدر ذلك! ,اراك قريبا! ,🚀',
         time: '12:6',

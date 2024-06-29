@@ -14,6 +14,7 @@ const Color kRedColor = const Color(0xFFFC1414);
 const Color kBackgroundColor = const Color(0xFFFCFCFC);
 const Color kInactiveColor = const Color(0xFFDBDBDB);
 const Color kTransparentColor = Colors.transparent;
+const Color kLightColor = const Color(0xFFF2F2F2);
 const Color kAvailableColor = const Color(0xffE0D9FF);
 const Color kLightGreyColor = const Color(0xFFE4E8EE);
 const Color kYellowDarkColor = const Color(0xFFB5AF20);
