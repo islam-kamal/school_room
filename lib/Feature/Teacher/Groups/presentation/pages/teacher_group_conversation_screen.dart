@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_chat_groups_actions_app_bar_widget.dart';
+import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_groups_actions_app_bar_widget.dart';
 import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_chat_groups_text_field_widget.dart';
 import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_chat_groups_title_app_bar_widget.dart';
 
@@ -18,15 +18,15 @@ class TeacherGroupConversationScreen extends StatelessWidget{
           backgroundColor: Colors.white,
           title: const TeacherChatGroupsTitleAppBar(),
           actions: const [
-            TeacherChatGroupsActionsAppBar(),
+            TeacherGroupActionsAppBar(),
           ],
         ),
-       body: Padding(
-         padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
-         child: Column(
+       body: Column(
           children: [
            Expanded(
-            child: ListView.builder(
+            child: Padding(
+       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+          child: ListView.builder(
               reverse: true,
               itemCount: 11,
              itemBuilder: (context, index) {
@@ -76,7 +76,7 @@ class TeacherGroupConversationScreen extends StatelessWidget{
                   ],
                 );
              },
-            )
+            ))
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.003,
@@ -85,7 +85,7 @@ class TeacherGroupConversationScreen extends StatelessWidget{
           ],
          ),
        ),
-        ),
+
       );
   }
 }

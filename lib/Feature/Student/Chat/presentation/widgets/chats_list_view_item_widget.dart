@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/navigtor.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Student/Chat/domain/entities/coversation_entity.dart';
+import 'package:school_room/Feature/Teacher/Chat/presentation/pages/teacher_conversation_with_student_screen.dart';
 
 class ChatsListViewItem extends StatelessWidget{
   const ChatsListViewItem({super.key, required this.conversation});
@@ -12,6 +13,7 @@ class ChatsListViewItem extends StatelessWidget{
   Widget build(BuildContext context) {
     return  InkWell(
       onTap: (){
+        customAnimatedPushNavigation(context, TeacherConversationWithStudentScreen());
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

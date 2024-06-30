@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Base/common/theme.dart';
 
-class TeacherChatGroupsActionsAppBar extends StatelessWidget {
-  const TeacherChatGroupsActionsAppBar({super.key});
+class TeacherGroupActionsAppBar extends StatelessWidget {
+  const TeacherGroupActionsAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +98,7 @@ void _showAlertDialog(BuildContext context) {
                           Expanded(
                             flex: 1,
                                child: Text(
-                                'اسم المجموعة',
+                                'اسم الاشعار',
                                 style: GoogleFonts.cairo(
                             color: Color(0xff6E6A7C),
                             fontSize: 13,

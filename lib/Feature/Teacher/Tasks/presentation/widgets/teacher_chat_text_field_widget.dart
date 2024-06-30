@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart'as intl;
-import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/popup_menu_of_icon_add.dart';
+import 'package:school_room/Base/common/theme.dart';
+import 'package:school_room/Feature/Teacher/Chat/presentation/widgets/chat_popup_menu_button.dart';
 
 class TeacherChatTextField extends StatefulWidget {
   const TeacherChatTextField({super.key});
@@ -74,7 +75,7 @@ class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.02,
           ),
-          MyPopupMenuButton(),
+          ChatPopupMenuButton(),
           // PopupMenuOfIconAdd(),
 
           // IconButton(
@@ -1239,6 +1240,8 @@ void _showAlertDialogStudentDetails(BuildContext context) {
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
+                                      hintText: "ايمن اشرف",
+
                                   ),
                                 ),
                               )
@@ -1280,6 +1283,8 @@ void _showAlertDialogStudentDetails(BuildContext context) {
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
+                                        hintText: "الثالث المتوسط"
+
                                     ),
                                   ),
                                 )
@@ -1322,6 +1327,7 @@ void _showAlertDialogStudentDetails(BuildContext context) {
                                     keyboardType: TextInputType.emailAddress,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
+                                      hintText: "3/4"
                                     ),
                                   ),
                                 )

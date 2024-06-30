@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Base/common/shared.dart';
+import 'package:school_room/Feature/Teacher/Chat/presentation/widgets/chat_popup_menu_button.dart';
 
 class TeacherChatGroupsTextField extends StatelessWidget{
   const TeacherChatGroupsTextField({super.key});
@@ -7,8 +9,8 @@ class TeacherChatGroupsTextField extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
             color: Colors.white,
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.12,
+            width: Shared.width,
+            height: MediaQuery.of(context).size.height * 0.1,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Row(
@@ -43,7 +45,7 @@ class TeacherChatGroupsTextField extends StatelessWidget{
                               fillColor: Color(0xffF0F0F3),
                               filled: true,
                               hintText: '...اكتب رسالة',
-                              hintTextDirection: TextDirection.ltr,
+                              hintTextDirection: TextDirection.rtl,
                               contentPadding:EdgeInsets.symmetric(horizontal: 16, vertical: 8)
                             ),
                           ),
@@ -57,16 +59,23 @@ class TeacherChatGroupsTextField extends StatelessWidget{
                     foregroundColor: Colors.white,
                     child: IconButton(
                       onPressed: (){},
-                      icon: const Icon(Icons.mic)
+                      icon: ImageIcon(AssetImage("assets/images/Microphone.png"))
                       ),
                   ),
-                  IconButton(
-                    onPressed: (){},
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.02,
+                  ),
+        ChatPopupMenuButton(),
+/*
+        IconButton(
+                    onPressed: (){
+                    },
                      icon: const Icon(
                       Icons.add,
                       color: Color(0xff36A690),
                       ),
                      ),
+*/
                 ],
               ),
             ),
