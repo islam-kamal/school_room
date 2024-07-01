@@ -61,14 +61,17 @@ class _HomeViewDetailsBodyState extends State<HomeViewDetailsBody> {
                   borderRadius: BorderRadius.circular(11),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20,horizontal: 10),
+                  padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(homeWorks[index].courseName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-                      Text(homeWorks[index].teacherName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14)),
-                      homeWorks[index].deliveryStatus ?     Row(
+                     Padding(padding: EdgeInsets.symmetric(vertical: 5),
+                     child:  Text(homeWorks[index].courseName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),),
+                Padding(padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Text(homeWorks[index].teacherName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 14)),
+                ),     Padding(padding: EdgeInsets.symmetric(vertical: 5),
+                child: homeWorks[index].deliveryStatus ?     Row(
                         children: [
                           Text("لم يتم تسليم الواجب هذا للاسبوع ",
                               style: TextStyle(fontWeight: FontWeight.normal,fontSize: 14,color: kGreenColor)),
@@ -79,9 +82,9 @@ class _HomeViewDetailsBodyState extends State<HomeViewDetailsBody> {
                         children: [
                           Text("لم يتم تسليم الواجب هذا للاسبوع  ",
                               style: TextStyle(fontWeight: FontWeight.normal,fontSize: 14,color: kRedColor)),
-                          Icon(Icons.circle,color: kRedColor,)
+                          Icon(Icons.cancel_outlined,color: kRedColor,)
                         ],
-                      )
+                      ))
                     ],
                   ),
                 ),

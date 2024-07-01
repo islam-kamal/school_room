@@ -50,7 +50,7 @@ final CourseEntity course;
                                  "${ course.studentNumber!} طالب ",
                                  style: Styles.textStyle16,
                                ),
-                               Image.asset('assets/images/profile.png')
+                               Icon(Icons.person_outline_outlined)
                              ],
                            ) ),
                      ],

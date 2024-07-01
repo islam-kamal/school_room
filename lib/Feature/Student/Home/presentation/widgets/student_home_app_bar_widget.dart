@@ -17,6 +17,7 @@ class StudentHomeAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return  AppBar(
       elevation: 0,
+      automaticallyImplyLeading: false,
       toolbarHeight: MediaQuery.of(context).size.height * 0.08,
       backgroundColor: Colors.white,
       title:Row(

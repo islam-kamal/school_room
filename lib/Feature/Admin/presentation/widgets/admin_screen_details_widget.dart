@@ -50,11 +50,11 @@ final List<CourseEntity> courses = [
               },
             );
             },
-          backgroundColor: Colors.white,
+          backgroundColor: kGreenColor,
           tooltip: 'انشاء مجموعة',
           elevation: 5,
           splashColor: Colors.grey,
-          child: const Icon(Icons.add, color: Colors.black, size: 29,),
+          child: const Icon(Icons.add, color: kWhiteColor, size: 29,),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       ),

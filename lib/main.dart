@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:localize_and_translate/localize_and_translate.dart';
+import 'package:school_room/Feature/Admin/presentation/pages/admin_screen.dart';
+import 'package:school_room/Feature/Father/BottomNavigationBar/presentation/pages/father_index_screen.dart';
+import 'package:school_room/Feature/Student/BottomNavigationBar/presentation/pages/student_index_screen.dart';
 import 'package:school_room/Feature/Teacher/BottomNavigationBar/presentation/pages/teacher_index_screen.dart';
+import 'package:school_room/splash_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Base/common/shared_preference_manger.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -117,7 +121,7 @@ class MyMaterialState extends State<MyMaterial> {
             DefaultCupertinoLocalizations.delegate,
           ],
 
-          home: TeacherIndexScreen(index: 0,),
+          home: SplashScreen(),
         );
       },
     );

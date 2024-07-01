@@ -20,7 +20,7 @@ class ProfileScreenDetails extends StatelessWidget{
        child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          leading: Icon(Icons.arrow_back_ios_new),
+          automaticallyImplyLeading: false,
           centerTitle: true,
           title: Text(
             'الملف الشخصي',

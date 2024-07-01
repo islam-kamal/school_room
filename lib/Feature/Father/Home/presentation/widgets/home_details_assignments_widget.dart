@@ -14,7 +14,7 @@ class HomeDetailsAssignments extends StatelessWidget{
                 color: kLightGreenColor,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child:  Padding(padding: EdgeInsets.symmetric(vertical: 0,horizontal: 8),
+              child:  Padding(padding: EdgeInsets.symmetric(vertical: 10,horizontal: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 

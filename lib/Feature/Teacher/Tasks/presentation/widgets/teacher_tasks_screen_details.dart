@@ -100,7 +100,10 @@ class _TeacherTasksScreenDetailsState extends State<TeacherTasksScreenDetails> {
                 : index == 1 ?  Expanded(child: ExamsNotCorrect()) : Expanded(child: DegreesOfExams())
           ],
         ),
-       floatingActionButton: CustomExpandableFab(),
+       floatingActionButton: Padding(
+         padding: EdgeInsets.symmetric(horizontal: 10),
+         child: CustomExpandableFab(),
+       ),
       )
 
      );

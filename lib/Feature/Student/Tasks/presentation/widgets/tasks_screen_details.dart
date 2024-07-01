@@ -24,6 +24,7 @@ class _TasksScreenDetailsState extends State<TasksScreenDetails> {
         elevation: 0,
         title: StudentTasksAppBar(),
       ),
+
       body: Column(
         children: [
           Divider(

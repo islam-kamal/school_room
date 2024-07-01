@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Base/common/navigtor.dart';
 import 'package:school_room/Feature/Father/Chat/domain/entities/coversation_entity.dart';
+import 'package:school_room/Feature/Father/Chat/presentation/pages/student_chat_conversation_screen.dart';
 
 class ChatsListViewItem extends StatelessWidget{
   const ChatsListViewItem({super.key, required this.conversation});
@@ -8,38 +10,43 @@ class ChatsListViewItem extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        ListTile(
-          leading: CircleAvatar(
-            child: Image.asset(
-              'assets/images/Rectangle.png',
-              width: MediaQuery.of(context).size.width *0.33,
+    return InkWell(
+      onTap: (){
+        customAnimatedPushNavigation(context, FatherChatConversationScreen());
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ListTile(
+            leading: CircleAvatar(
+              child: Image.asset(
+                'assets/images/Rectangle.png',
+                width: MediaQuery.of(context).size.width *0.33,
+              ),
+            ),
+            title: Text(conversation.name),
+            subtitle: Text(conversation.message),
+            trailing: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(conversation.time),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height *0.01,
+                ),
+                Badge(
+                  backgroundColor: Color(0xff36A690),
+                  padding: EdgeInsets.symmetric(horizontal: 5),
+                  label: Text(conversation.numberMessage),
+                  largeSize: 19,
+
+                ),
+              ],
             ),
           ),
-          title: Text(conversation.name),
-          subtitle: Text(conversation.message),
-          trailing: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(conversation.time),
-              SizedBox(
-                height: MediaQuery.of(context).size.height *0.01,
-              ),
-              Badge(
-                backgroundColor: Color(0xff36A690),
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                label: Text(conversation.numberMessage),
-                largeSize: 19,
-
-              ),
-            ],
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

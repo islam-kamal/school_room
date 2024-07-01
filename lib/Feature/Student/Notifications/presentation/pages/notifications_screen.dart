@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:school_room/Feature/Father/Notifications/presentation/widgets/notifications_list_view_item_widget.dart';
+import 'package:school_room/Feature/Student/BottomNavigationBar/presentation/pages/student_index_screen.dart';
 import 'package:school_room/Feature/Student/Home/presentation/widgets/student_exams_and_groups_screen_details.dart';
 import 'package:school_room/core/utils/index.dart';
 
@@ -33,7 +34,7 @@ class NotificationsScreen extends StatelessWidget{
                   IconButton(
                     color: Colors.black,
                     onPressed: (){
-                      customAnimatedPushNavigation(context, StudentExamsAndGroupsScreenDetails());
+                      customAnimatedPushNavigation(context, StudentIndexScreen(index: 0));
 
                     },
                     icon: const Icon(Icons.arrow_forward),

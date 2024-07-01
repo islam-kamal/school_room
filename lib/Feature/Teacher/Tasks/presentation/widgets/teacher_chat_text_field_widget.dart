@@ -96,7 +96,7 @@ class _TeacherChatTextFieldState extends State<TeacherChatTextField> {
 
 
 void _showAlertDialogExamDegree(BuildContext context) {
-  TextEditingController _textFieldController = TextEditingController();
+  TextEditingController _textFieldController = TextEditingController(text: "امتحان اللغة العربية");
 
   showDialog(
     context: context,
@@ -136,9 +136,10 @@ void _showAlertDialogExamDegree(BuildContext context) {
                                       fontSize: 13,
                                     ),
                                   )),
-                              const Expanded(
+                               Expanded(
                                 flex: 1,
                                 child: TextField(
+                                  controller: _textFieldController,
                                   textAlign: TextAlign.right,
                                   keyboardType: TextInputType.emailAddress,
                                   decoration: InputDecoration(

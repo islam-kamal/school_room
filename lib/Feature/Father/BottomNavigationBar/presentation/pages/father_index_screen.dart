@@ -2,7 +2,7 @@ import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
 import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/image_manger.dart';
-import 'package:school_room/Feature/Father/Chat/presentation/pages/chat_screen.dart';
+import 'package:school_room/Feature/Father/Chat/presentation/pages/father_chat_screen.dart';
 import 'package:school_room/Feature/Father/Home/presentation/pages/pages/home_view.dart';
 import 'package:school_room/Feature/Father/Notifications/presentation/pages/notifications_screen.dart';
 import 'package:school_room/Feature/Father/Profile/presentation/pages/profile_screen.dart';
@@ -34,7 +34,7 @@ class _FatherIndexScreenState extends State<FatherIndexScreen> {
 
   List<Widget> _buildScreens = [
     HomeScreen(),
-    ChatScreen(),
+    FatherChatScreen(),
     NotificationsScreen(),
     ProfileScreen()
   ];

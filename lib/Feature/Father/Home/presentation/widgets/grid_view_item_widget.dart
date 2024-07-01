@@ -17,9 +17,6 @@ class GridViewItem extends StatelessWidget{
           son: son,
         ));
 
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  ( HomeViewDetails(
-          son: son,
-        ))));
       },
       child: Stack(
         clipBehavior: Clip.none,

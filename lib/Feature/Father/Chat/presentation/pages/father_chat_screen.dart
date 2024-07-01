@@ -6,7 +6,7 @@ import 'package:school_room/Feature/Father/Chat/domain/entities/coversation_enti
 import '../../../../../Base/utils/styles.dart';
 import '../widgets/chats_list_view_item_widget.dart';
 
-class ChatScreen extends StatelessWidget{
+class FatherChatScreen extends StatelessWidget{
   final List<ConversationsEntity> conversations = [
     ConversationsEntity(
         image: 'assets/images/Rectangle.png',

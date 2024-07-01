@@ -7,15 +7,8 @@ class StudentTasksAppBar extends StatelessWidget{
   Widget build(BuildContext context) {
     return AppBar(
       title: Text("المهام",),
+      automaticallyImplyLeading: false,
       centerTitle: true,
-/*      leading: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: kWhiteColor,
-        ),
-        child: Icon(Icons.arrow_back),
-      ),*/
-
 
     );
   }

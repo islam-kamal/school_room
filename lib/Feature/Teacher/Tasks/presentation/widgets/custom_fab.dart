@@ -3,6 +3,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:school_room/Base/common/shared.dart';
 import 'package:school_room/Base/common/theme.dart';
+import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/create_assignment_dialog.dart';
+import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/create_quiz_dialog.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/mcq_question_dialog.dart';
 
 @immutable
@@ -44,15 +46,27 @@ class CustomExpandableFab extends StatelessWidget {
           icon: ImageIcon(AssetImage("assets/images/mcq.png")),
         ),
         ActionButton(
-          onPressed: () => _showAction(context, 1),
+          onPressed: (){
+            showDialog(context: context, builder: (context){
+              return McqQuestionDialog();
+            });
+          },
           icon: ImageIcon(AssetImage("assets/images/question.png")),
         ),
         ActionButton(
-          onPressed: () => _showAction(context, 2),
+          onPressed: (){
+            showDialog(context: context, builder: (context){
+              return CreateQuizDialog();
+            });
+          },
           icon: ImageIcon(AssetImage("assets/images/quiz.png")),
         ),
         ActionButton(
-          onPressed: () => _showAction(context, 3),
+          onPressed: (){
+            showDialog(context: context, builder: (context){
+              return CreateAssignmentDialog();
+            });
+          },
           icon: ImageIcon(AssetImage("assets/images/assignment.png")),
         ),
       ],
@@ -258,7 +272,7 @@ class ActionButton extends StatelessWidget {
     return Material(
       shape: const CircleBorder(),
       clipBehavior: Clip.antiAlias,
-      color: theme.colorScheme.secondary,
+      color: kGreenColor,
       elevation: 4,
       child: IconButton(
         onPressed: onPressed,

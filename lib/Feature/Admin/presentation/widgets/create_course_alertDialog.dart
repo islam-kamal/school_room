@@ -105,7 +105,7 @@ class CreateCourseAlertDialog extends StatelessWidget{
             );
 
           },
-          child:const Text('التالي',style: TextStyle(color: kWhiteColor),),
+          child:const Text('أنشاء',style: TextStyle(color: kWhiteColor),),
           style: OutlinedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
