@@ -4,6 +4,7 @@ import 'package:school_room/Feature/Student/Tasks/presentation/widgets/student_t
 import 'package:school_room/Feature/Student/Tasks/presentation/widgets/student_task_completed_widget.dart';
 import 'package:school_room/Feature/Student/Tasks/presentation/widgets/student_tasks_app_bar.dart';
 import 'package:school_room/Feature/Student/Tasks/presentation/widgets/student_task_not_delivered_widget.dart';
+import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/custom_fab.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/degrees_of_exams_widget.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/exams_done_widget.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/exams_not_corrected_widget.dart';
@@ -99,7 +100,7 @@ class _TeacherTasksScreenDetailsState extends State<TeacherTasksScreenDetails> {
                 : index == 1 ?  Expanded(child: ExamsNotCorrect()) : Expanded(child: DegreesOfExams())
           ],
         ),
-
+       floatingActionButton: CustomExpandableFab(),
       )
 
      );

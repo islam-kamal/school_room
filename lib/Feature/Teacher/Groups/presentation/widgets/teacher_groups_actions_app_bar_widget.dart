@@ -67,6 +67,8 @@ void _showAlertDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
         title: Align(
             alignment: Alignment.center,
             child: Text(

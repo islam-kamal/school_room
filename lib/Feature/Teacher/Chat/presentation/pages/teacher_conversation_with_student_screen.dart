@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:school_room/Feature/Teacher/Chat/presentation/widgets/teacher_chat_app_bar_widget.dart';
 import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_chat_actions_app_bar_widget.dart';
 import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_groups_actions_app_bar_widget.dart';
 import 'package:school_room/Feature/Teacher/Groups/presentation/widgets/teacher_chat_groups_text_field_widget.dart';
@@ -17,7 +18,7 @@ class TeacherConversationWithStudentScreen extends StatelessWidget{
           elevation: 0,
           automaticallyImplyLeading: false,
           backgroundColor: Colors.white,
-          title: const TeacherChatGroupsTitleAppBar(),
+          title: const TeacherChatAppBar(),
           actions: const [
             TeacherChatActionsAppBar(),
           ],

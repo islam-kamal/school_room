@@ -10,6 +10,8 @@ class CreateCourseSuccessfullyDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+
         backgroundColor: kWhiteColor, // Change the background color here
         content: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15),

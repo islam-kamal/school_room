@@ -13,6 +13,8 @@ class CreateCourseAlertDialog extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      surfaceTintColor: Colors.transparent,
+
       backgroundColor: kWhiteColor, // Change the background color here
       title: Align(
           alignment: Alignment.centerRight,

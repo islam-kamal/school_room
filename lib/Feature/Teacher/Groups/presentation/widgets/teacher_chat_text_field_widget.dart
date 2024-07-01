@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart'as intl;
+import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Teacher/Chat/presentation/widgets/chat_popup_menu_button.dart';
 
 class TeacherChatTextField extends StatefulWidget {
@@ -101,7 +102,9 @@ void _showAlertDialogExamDegree(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-          content: Directionality(
+        surfaceTintColor: Colors.transparent,
+backgroundColor: kWhiteColor,
+        content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
               width: double.infinity,
@@ -529,7 +532,9 @@ void _showAlertDialogExamPrepare(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-          content: Directionality(
+        surfaceTintColor: Colors.transparent,
+backgroundColor: kWhiteColor,
+        content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
               width: double.infinity,
@@ -913,6 +918,8 @@ void _showAlertDialogExamQuestion(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content:  Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
@@ -1199,7 +1206,8 @@ void _showAlertDialogStudentDetails(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      return AlertDialog(
+      return AlertDialog(    surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(

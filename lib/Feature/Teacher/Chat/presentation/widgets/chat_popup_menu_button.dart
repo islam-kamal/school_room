@@ -111,7 +111,7 @@ class ChatPopupMenuButton extends StatelessWidget {
 
                         child: Container(
                           padding: const EdgeInsets.all(16.0),
-                          height: Shared.width * 0.35,
+                          height: Shared.width * 0.3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

@@ -13,6 +13,8 @@ class TeacherCorrectExamDailog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       backgroundColor: kWhiteColor,
+      surfaceTintColor: Colors.transparent,
+
       content: Directionality(
         textDirection: TextDirection.rtl,
         child: Container(

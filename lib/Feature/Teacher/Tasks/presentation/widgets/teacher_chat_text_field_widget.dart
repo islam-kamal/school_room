@@ -102,6 +102,8 @@ void _showAlertDialogExamDegree(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
@@ -530,6 +532,8 @@ void _showAlertDialogExamPrepare(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
@@ -914,6 +918,8 @@ void _showAlertDialogExamQuestion(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content:  Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
@@ -1201,6 +1207,8 @@ void _showAlertDialogStudentDetails(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        surfaceTintColor: Colors.transparent,
+        backgroundColor: kWhiteColor,
           content: Directionality(
             textDirection: TextDirection.rtl,
             child: Container(
