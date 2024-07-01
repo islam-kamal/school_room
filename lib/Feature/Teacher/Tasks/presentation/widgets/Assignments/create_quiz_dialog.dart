@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/send_exam_successfully_dialog.dart';
+import 'package:school_room/Widgets/custom_textformfield_widget.dart';
 
 class CreateQuizDialog extends StatelessWidget{
-  TextEditingController _questionTextFieldController = TextEditingController(text: "سؤال في اللغة العربية");
-  TextEditingController _descTextFieldController = TextEditingController(text: "تصميم هذا التطبيق للمتاجر الكبرى. وباستخدام هذا التطبيق، يمكنهم إدراج جميع منتجاتهم في مكان واحد وتوصيلها. وسيحصل العملاء على حل شامل للتسوق اليومي.");
-
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -22,92 +20,14 @@ class CreateQuizDialog extends StatelessWidget{
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffEBEBEB),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Padding(
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    child: Expanded(
-                      flex: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                              flex: 1,
-                              child: Text(
-                                'السؤال',
-                                style: GoogleFonts.cairo(
-                                  color: Color(0xff6E6A7C),
-                                  fontSize: 13,
-                                ),
-                              )),
-                           Expanded(
-                            flex: 1,
-                            child: TextField(
-                              controller: _questionTextFieldController,
-                              textAlign: TextAlign.right,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                CustomTextFormFieldWidget(
+                  controller: TextEditingController(text: "سؤال في اللغة العربية"),
+                  labelText:       'السؤال',
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 18),
-                  child: Container(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.15,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffEBEBEB),
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                      ),
-                      child: Expanded(
-                        flex: 6,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                                flex: 1,
-                                child: Text(
-                                  'الأجابة',
-                                  style: GoogleFonts.cairo(
-                                    color: Color(0xff6E6A7C),
-                                    fontSize: 13,
-                                  ),
-                                )),
-                             Expanded(
-                              flex: 5,
-                              child: TextField(
-                                controller: _descTextFieldController,
-                                maxLines: 4,
-                                style: TextStyle(fontWeight: FontWeight.normal,fontSize: 10),
-                                textAlign: TextAlign.right,
-                                keyboardType: TextInputType.multiline,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                CustomTextFormFieldWidget(
+controller:   TextEditingController(text: "تصميم هذا التطبيق للمتاجر الكبرى. وباستخدام هذا التطبيق، يمكنهم إدراج جميع منتجاتهم في مكان واحد وتوصيلها. وسيحصل العملاء على حل شامل للتسوق اليومي."),
+                  labelText: 'وصف',
+                  maxLines: 3,
                 ),
                 Text(
                   'ملحوظة : تظهر الاجابة بعد انتهاء مدة السؤال تلقائيا للطلبة',
@@ -129,17 +49,12 @@ class CreateQuizDialog extends StatelessWidget{
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                          flex: 6,
-                          child: Row(
+                      child:  Row(
                             children: [
                               Expanded(
                                   flex: 1,
                                   child: Image.asset(
                                       'assets/images/timer.png',scale: 2.5,)),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.01,
-                              ),
                               Expanded(
                                   flex: 4,
                                   child: Padding(
@@ -179,7 +94,7 @@ class CreateQuizDialog extends StatelessWidget{
                             ],
                           )),
                     ),
-                  ),
+
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18),
@@ -194,9 +109,7 @@ class CreateQuizDialog extends StatelessWidget{
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                        flex: 5,
-                        child: Row(
+                      child:  Row(
                           children: [
                             Expanded(
                               flex: 4,
@@ -225,7 +138,7 @@ class CreateQuizDialog extends StatelessWidget{
                       ),
                     ),
                   ),
-                ),
+
               ],
             ),
           ),
@@ -260,7 +173,6 @@ class CreateQuizDialog extends StatelessWidget{
                   ),
                   onPressed: () {
                     // You can handle the submit action here
-                    print('Entered text: ${_descTextFieldController.text}');
                     Navigator.of(context).pop();
                   },
                 ),

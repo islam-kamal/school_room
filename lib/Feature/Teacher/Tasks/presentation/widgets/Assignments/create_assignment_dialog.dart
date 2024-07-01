@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/send_exam_successfully_dialog.dart';
+import 'package:school_room/Widgets/custom_textformfield_widget.dart';
 
 class CreateAssignmentDialog extends StatelessWidget{
   TextEditingController _nameTextFieldController = TextEditingController(text: "امتحان اللغة العربية");
-  TextEditingController _descriptionTextFieldController = TextEditingController(text: "تصميم هذا التطبيق للمتاجر الكبرى. وباستخدام هذا التطبيق، يمكنهم إدراج جميع منتجاتهم في مكان واحد وتوصيلها. وسيحصل العملاء على حل شامل للتسوق اليومي.");
+  TextEditingController _descriptionTextFieldController =
+  TextEditingController(text: "تصميم هذا التطبيق للمتاجر الكبرى. وباستخدام هذا التطبيق، يمكنهم إدراج جميع منتجاتهم في مكان واحد وتوصيلها. وسيحصل العملاء على حل شامل للتسوق اليومي.");
 
   @override
   Widget build(BuildContext context) {
@@ -22,92 +24,14 @@ class CreateAssignmentDialog extends StatelessWidget{
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  width: double.infinity,
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffEBEBEB),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Padding(
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    child: Expanded(
-                      flex: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                              flex: 1,
-                              child: Text(
-                                'اسم الامتحان',
-                                style: GoogleFonts.cairo(
-                                  color: Color(0xff6E6A7C),
-                                  fontSize: 13,
-                                ),
-                              )),
-                          Expanded(
-                            flex: 1,
-                            child: TextField(
-                              controller: _nameTextFieldController,
-                              textAlign: TextAlign.right,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                CustomTextFormFieldWidget(
+                  controller: TextEditingController(text: "امتحان اللغة العربية"),
+                  labelText: 'اسم الامتحان',
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 18),
-                  child: Container(
-                    width: double.infinity,
-                    height: MediaQuery.of(context).size.height * 0.15,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffEBEBEB),
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                      ),
-                      child: Expanded(
-                        flex: 6,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                                flex: 1,
-                                child: Text(
-                                  'وصف',
-                                  style: GoogleFonts.cairo(
-                                    color: Color(0xff6E6A7C),
-                                    fontSize: 13,
-                                  ),
-                                )),
-                             Expanded(
-                              flex: 5,
-                              child: TextField(
-                                controller: _descriptionTextFieldController,
-                                maxLines: 4,
-                                style: TextStyle(fontWeight: FontWeight.normal,fontSize: 10),
-
-                                textAlign: TextAlign.right,
-                                keyboardType: TextInputType.multiline,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                CustomTextFormFieldWidget(
+                  controller: TextEditingController(text: "تصميم هذا التطبيق للمتاجر الكبرى. وباستخدام هذا التطبيق، يمكنهم إدراج جميع منتجاتهم في مكان واحد وتوصيلها. وسيحصل العملاء على حل شامل للتسوق اليومي."),
+                  labelText: 'وصف',
+                  maxLines: 3,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18),
@@ -122,9 +46,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                          flex: 6,
-                          child: Row(
+                      child:  Row(
                             children: [
                               Expanded(
                                   flex: 1,
@@ -142,9 +64,6 @@ class CreateAssignmentDialog extends StatelessWidget{
                                     child: Image.asset(
                                         'assets/images/calendar.png',scale: 2.5,),
                                   )),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.01,
-                              ),
                               Expanded(
                                   flex: 4,
                                   child: Padding(
@@ -191,7 +110,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                               ),
                             ],
                           )),
-                    ),
+
                   ),
                 ),
                 Padding(
@@ -207,9 +126,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                          flex: 6,
-                          child: Row(
+                      child:  Row(
                             children: [
                               Expanded(
                                   flex: 1,
@@ -227,9 +144,6 @@ class CreateAssignmentDialog extends StatelessWidget{
                                     child: Image.asset(
                                         'assets/images/calendar.png',scale: 2.5,),
                                   )),
-                              SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.01,
-                              ),
                               Expanded(
                                   flex: 4,
                                   child: Padding(
@@ -276,7 +190,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                               ),
                             ],
                           )),
-                    ),
+
                   ),
                 ),
                 Padding(
@@ -292,9 +206,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                        flex: 5,
-                        child: Row(
+                      child: Row(
                           children: [
                             Expanded(
                               flex: 4,
@@ -321,7 +233,7 @@ class CreateAssignmentDialog extends StatelessWidget{
                           ],
                         ),
                       ),
-                    ),
+
                   ),
                 ),
                 Padding(

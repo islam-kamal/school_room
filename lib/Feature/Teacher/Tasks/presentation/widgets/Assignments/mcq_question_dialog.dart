@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:school_room/Base/common/shared.dart';
 import 'package:school_room/Base/common/theme.dart';
 import 'package:school_room/Feature/Teacher/Tasks/presentation/widgets/Assignments/send_exam_successfully_dialog.dart';
+import 'package:school_room/Widgets/custom_textformfield_widget.dart';
 
 class McqQuestionDialog extends StatefulWidget{
   @override
@@ -11,9 +12,6 @@ class McqQuestionDialog extends StatefulWidget{
 }
 
 class _McqQuestionDialogState extends State<McqQuestionDialog> {
-  TextEditingController _textFieldController = TextEditingController(
-    text: "سؤال في اللغة العربية"
-  );
 List<String> questions = ["الاختيار الأول","الاختيار الثانى","الاختيار الثالث",];
 int currentIndex = 0;
   @override
@@ -33,47 +31,10 @@ int currentIndex = 0;
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Padding(padding: EdgeInsets.only(bottom: 10),
-                child: Container(
-                  width: Shared.width,
-                  height: Shared.height * 0.08,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffEBEBEB),
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Padding(
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                    child: Expanded(
-                      flex: 2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Expanded(
-                              flex: 1,
-                              child: Text(
-                                'السؤال',
-                                style: GoogleFonts.cairo(
-                                  color: Color(0xff6E6A7C),
-                                  fontSize: 13,
-                                ),
-                              )),
-                          Expanded(
-                            flex: 1,
-                            child: TextField(
-                              controller: _textFieldController,
-                              textAlign: TextAlign.right,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),),
+                CustomTextFormFieldWidget(
+                  controller: TextEditingController(text: "سؤال في اللغة العربية"),
+                  labelText:       'السؤال',
+                ),
 
                SizedBox(
                  width: Shared.width ,
@@ -82,7 +43,6 @@ int currentIndex = 0;
                      shrinkWrap: true,
                      itemCount: questions.length,
                      itemBuilder: (context,index){
-
                        return  Padding(
                          padding: const EdgeInsets.only(top: 12),
                          child: InkWell(
@@ -179,9 +139,7 @@ int currentIndex = 0;
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                          flex: 6,
-                          child: Row(
+                      child:  Row(
                             children: [
                               Expanded(
                                   flex: 1,
@@ -229,7 +187,7 @@ int currentIndex = 0;
                             ],
                           )),
                     ),
-                  ),
+
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 18),
@@ -244,9 +202,7 @@ int currentIndex = 0;
                       padding: const EdgeInsets.symmetric(
                         horizontal: 8,
                       ),
-                      child: Expanded(
-                        flex: 5,
-                        child: Row(
+                      child: Row(
                           children: [
                             Expanded(
                               flex: 4,
@@ -273,7 +229,7 @@ int currentIndex = 0;
                           ],
                         ),
                       ),
-                    ),
+
                   ),
                 ),
               ],
@@ -310,7 +266,6 @@ int currentIndex = 0;
                   ),
                   onPressed: () {
                     // You can handle the submit action here
-                    print('Entered text: ${_textFieldController.text}');
                     Navigator.of(context).pop();
                   },
                 ),
